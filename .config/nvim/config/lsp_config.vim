@@ -24,3 +24,14 @@ inoremap <silent><expr> <TAB>
   \ <SID>check_back_space() ? "\<TAB>" :
   \ asyncomplete#force_refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+" keybinds {{{
+" check definition
+nmap K :LspPeekDefinition<CR>
+
+nmap gd :LspDefinition<CR>
+
+nmap gr :LspRename<CR>
+
+nmap gt :LspTypeDefinition<CR>
+" }}}

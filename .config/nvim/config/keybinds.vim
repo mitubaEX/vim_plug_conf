@@ -104,9 +104,6 @@ nnoremap <Leader>o o<Esc>
 " indent all lines
 map <Leader>= gg=G<C-o><C-o>
 
-" defx
-" nnoremap <Leader>d :<C-u>Defx `expand('%:p:h')` -columns=git:icons:filename:type -search=`expand('%:p')`<CR>
-
 " fern
 nnoremap <Leader>d :Fern . -reveal=% -drawer -toggle<CR>
 
@@ -150,9 +147,6 @@ xmap <Leader>k <Plug>(columnskip:nonblank:prev)
 
 " previous jump
 nnoremap <C-p> <C-i>
-
-" undotree
-nnoremap <Leader>u :UndotreeToggle<CR>
 
 " fzf
 nmap <Leader>t :call fzf#run(fzf#wrap('files', {'source': 'rg --files --hidden --glob "!.git/*"'}))<CR>
