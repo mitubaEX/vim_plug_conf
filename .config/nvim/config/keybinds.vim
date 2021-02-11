@@ -157,6 +157,9 @@ nnoremap <Leader>u :UndotreeToggle<CR>
 " fzf
 nmap <Leader>t :call fzf#run(fzf#wrap('files', {'source': 'rg --files --hidden --glob "!.git/*"'}))<CR>
 nmap <Leader>T :GFiles<CR>
+nmap ; :Buffers<CR>
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+let g:fzf_tags_command = 'ctags -R --exclude=.git --exclude=node_modules --exclude=test --exclude=spec --exclude=vendor'
 
 " any junmp
 " Normal mode: Jump to definition under cursore

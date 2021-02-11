@@ -7,6 +7,7 @@ source $HOME/.config/nvim/config/set.vim
 source $HOME/.config/nvim/config/color.vim
 source $HOME/.config/nvim/config/util_script.vim
 source $HOME/.config/nvim/config/fzf_functions.vim
+source $HOME/.config/nvim/config/plugin_config.vim
 
 if executable('solargraph')
     " gem install solargraph

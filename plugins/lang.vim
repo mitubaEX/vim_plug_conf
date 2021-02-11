@@ -1,3 +1,4 @@
+Plug 'sheerun/vim-polyglot'
 Plug 'prabirshrestha/vim-lsp'
 
 " solargraph config
@@ -5,3 +6,13 @@ Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
+
+" csv
+Plug 'chrisbra/csv.vim', { 'for': 'csv' }
+
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascriptreact', 'typescript', 'typescriptreact'] }
+Plug 'leafgarland/typescript-vim', { 'for': ['javascript', 'javascriptreact', 'typescript', 'typescriptreact'] }
+Plug 'maxmellon/vim-jsx-pretty', { 'for': ['javascript', 'javascriptreact', 'typescript', 'typescriptreact'] }
