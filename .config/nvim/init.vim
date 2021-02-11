@@ -1,21 +1,4 @@
-" Specify a directory for plugins
-" - For Neovim: stdpath('data') . '/plugged'
-" - Avoid using standard Vim directory names like 'plugin'
-call plug#begin('~/.vim/plugged')
-
-Plug 'prabirshrestha/vim-lsp'
-
-" solargraph config
-" ref: https://eitoball.hatenablog.com/entry/2019/12/02/033349
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim' 
-
-" Initialize plugin system
-call plug#end()
+source $HOME/plugins/plugins.vim
 
 if executable('solargraph')
     " gem install solargraph
