@@ -189,6 +189,28 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " itchyny/lightline.vim {{{
+" ref: https://kitagry.github.io/blog/programmings/2020/08/lightline-vim-lsp/
+function! LightlineLSPWarnings() abort
+  let l:counts = lsp#get_buffer_diagnostics_counts()
+  return l:counts.warning == 0 ? '' : printf('W:%d', l:counts.warning)
+endfunction
+
+function! LightlineLSPErrors() abort
+  let l:counts = lsp#get_buffer_diagnostics_counts()
+  return l:counts.error == 0 ? '' : printf('E:%d', l:counts.error)
+endfunction
+
+function! LightlineLSPOk() abort
+  let l:counts =  lsp#get_buffer_diagnostics_counts()
+  let l:total = l:counts.error + l:counts.warning
+  return l:total == 0 ? 'OK' : ''
+endfunction
+
+augroup LightLineOnLSP
+  autocmd!
+  autocmd User lsp_diagnostics_updated call lightline#update()
+augroup END
+
 set noshowmode
 let g:lightline = {
      \ 'separator': { 'left': '', 'right': '' },
@@ -206,7 +228,8 @@ let g:lightline = {
      \   'right': [
      \     [ 'lineinfo' ],
      \     [ 'percent' ],
-     \     [ 'cocstatus', 'currentfunction', 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ],
+     \     [ 'currentfunction', 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ],
+     \     [ 'lsp_errors', 'lsp_warnings', 'lsp_ok' ],
      \  ],
      \ },
      \ 'component': {
@@ -216,12 +239,18 @@ let g:lightline = {
      \   'cwd': 'getcwd',
      \   'wifi': 'wifi#component',
      \   'battery': 'battery#component',
-     \   'ale': 'ALEStatus',
      \   'gitbranch': 'fugitive#head',
      \   'filename': 'LightLineFilename',
-     \   'cocstatus': 'coc#status',
-     \   'currentfunction': 'CocCurrentFunction',
-     \   'method': 'NearestMethodOrFunction'
+     \ },
+     \ 'component_expand': {
+     \   'lsp_warnings': 'LightlineLSPWarnings',
+     \   'lsp_errors':   'LightlineLSPErrors',
+     \   'lsp_ok':       'LightlineLSPOk',
+     \ },
+     \ 'component_type': {
+     \   'lsp_warnings': 'warning',
+     \   'lsp_errors':   'error',
+     \   'lsp_ok':       'middle',
      \ },
      \ }
 
