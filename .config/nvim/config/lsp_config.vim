@@ -1,4 +1,9 @@
 " solargraph
+" When enter rails project, run bellow commands
+" $ gem install solargraph
+" $ solargraph download-core
+" $ solargraph bundle
+" $ solargraph config
 if executable('solargraph')
     " gem install solargraph
     au User lsp_setup call lsp#register_server({
@@ -10,6 +15,8 @@ if executable('solargraph')
 endif
 
 " typescript
+" install commands
+" $ npm install -g typescript typescript-language-server
 if executable('typescript-language-server')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'typescript-language-server',
@@ -18,6 +25,10 @@ if executable('typescript-language-server')
         \ 'whitelist': ['typescript', 'typescript.tsx', 'typescriptreact'],
         \ })
 endif
+
+" typescript file type
+autocmd bufnewfile,bufread *.tsx set filetype=typescriptreact
+autocmd bufnewfile,bufread *.jsx set filetype=javascriptreact
 
 inoremap <silent><expr> <TAB>
   \ pumvisible() ? "\<C-n>" :
