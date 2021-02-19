@@ -1,3 +1,6 @@
+" coc
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 Plug 'sheerun/vim-polyglot'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'

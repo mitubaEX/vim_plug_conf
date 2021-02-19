@@ -228,7 +228,7 @@ let g:lightline = {
      \   'right': [
      \     [ 'lineinfo' ],
      \     [ 'percent' ],
-     \     [ 'currentfunction', 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ],
+     \     [ 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ],
      \     [ 'lsp_errors', 'lsp_warnings', 'lsp_ok' ],
      \  ],
      \ },
@@ -264,3 +264,13 @@ let g:move_key_modifier = 'C'
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
+
+" coc
+let g:coc_global_extensions = [
+  \ 'coc-eslint',
+  \ 'coc-prettier',
+  \ ]
+
+" coc-prettier
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+let b:coc_suggest_disable = 1
