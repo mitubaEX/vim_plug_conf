@@ -1,5 +1,6 @@
 Plug 'sheerun/vim-polyglot'
 Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
 
 " solargraph config
 " ref: https://eitoball.hatenablog.com/entry/2019/12/02/033349

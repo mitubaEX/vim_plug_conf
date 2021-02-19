@@ -10,13 +10,18 @@ Plug 'ulwlu/elly.vim'
 
 Plug 'voldikss/vim-floaterm'
 
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
 Plug 'rhysd/accelerated-jk'
 Plug 'thinca/vim-quickrun'
+Plug 'tyru/caw.vim'
+Plug 'matze/vim-move'
 
 " git
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-fugitive'
 Plug 'lambdalisue/gina.vim'
+Plug 'airblade/vim-gitgutter'
 
 Plug 'rhysd/clever-f.vim'
 Plug 'kana/vim-operator-user'

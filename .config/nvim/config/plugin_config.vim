@@ -258,3 +258,9 @@ function! LightLineFilename()
   return expand('%')
 endfunction
 " }}}
+
+" matze/vim-move
+let g:move_key_modifier = 'C'
+
+" deoplete
+let g:deoplete#enable_at_startup = 1

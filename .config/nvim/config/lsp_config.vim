@@ -30,11 +30,23 @@ endif
 autocmd bufnewfile,bufread *.tsx set filetype=typescriptreact
 autocmd bufnewfile,bufread *.jsx set filetype=javascriptreact
 
-inoremap <silent><expr> <TAB>
-  \ pumvisible() ? "\<C-n>" :
-  \ <SID>check_back_space() ? "\<TAB>" :
-  \ asyncomplete#force_refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" efm-langserver
+if executable('efm-langserver')
+    augroup LspEFM
+        au!
+        autocmd User lsp_setup call lsp#register_server({
+                    \ 'name': 'efm-langserver-eslint',
+                    \ 'cmd': {server_info->['efm-langserver', '-c='.$HOME.'/.config/efm-langserver/config.yaml']},
+                    \ 'allowlist': ['vim', 'eruby', 'markdown', 'yaml', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact'],
+                    \ })
+    augroup END
+endif
+
+autocmd BufWritePre <buffer> LspDocumentFormatSync
+
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
 
 " keybinds {{{
 " check definition
@@ -46,3 +58,5 @@ nmap gr :LspRename<CR>
 
 nmap gt :LspTypeDefinition<CR>
 " }}}
+let g:lsp_log_verbose = 1
+let g:lsp_log_file = expand('~/vim-lsp.log')
