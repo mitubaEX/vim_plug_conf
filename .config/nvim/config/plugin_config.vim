@@ -203,7 +203,7 @@ endfunction
 function! LightlineLSPOk() abort
   let l:counts =  lsp#get_buffer_diagnostics_counts()
   let l:total = l:counts.error + l:counts.warning
-  return l:total == 0 ? 'OK' : ''
+  return l:total == 0 ? '' : ''
 endfunction
 
 augroup LightLineOnLSP
@@ -224,12 +224,12 @@ let g:lightline = {
      \   'left': [
      \     ['mode', 'paste'],
      \     [ 'gitbranch', 'readonly', 'filename', 'modified' ],
+     \     [ 'lsp_errors', 'lsp_warnings', 'lsp_ok' ],
      \   ],
      \   'right': [
      \     [ 'lineinfo' ],
      \     [ 'percent' ],
      \     [ 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ],
-     \     [ 'lsp_errors', 'lsp_warnings', 'lsp_ok' ],
      \  ],
      \ },
      \ 'component': {
