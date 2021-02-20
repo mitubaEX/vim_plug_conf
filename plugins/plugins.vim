@@ -10,8 +10,6 @@ Plug 'ulwlu/elly.vim'
 
 Plug 'voldikss/vim-floaterm'
 
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
 Plug 'rhysd/accelerated-jk'
 Plug 'thinca/vim-quickrun'
 Plug 'tyru/caw.vim'
