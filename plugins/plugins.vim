@@ -83,5 +83,8 @@ Plug 'itchyny/lightline.vim'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
+Plug 'nvim-lua/completion-nvim'
+Plug 'neovim/nvim-lspconfig'
+
 " Initialize plugin system
 call plug#end()

@@ -23,3 +23,10 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 EOF
+
+lua << EOF
+require'lspconfig'.tsserver.setup{}
+require'lspconfig'.solargraph.setup{}
+EOF
+" Use completion-nvim in every buffer
+autocmd BufEnter * lua require'completion'.on_attach()
