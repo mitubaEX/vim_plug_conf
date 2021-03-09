@@ -30,3 +30,6 @@ require'lspconfig'.solargraph.setup{}
 EOF
 " Use completion-nvim in every buffer
 autocmd BufEnter * lua require'completion'.on_attach()
+
+" open spec template
+autocmd BufNewFile *_spec.rb 0r ~/.config/nvim/template/template_spec.rb
