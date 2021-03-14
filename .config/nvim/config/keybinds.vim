@@ -115,15 +115,6 @@ nmap <Leader>C :!echo "%" \| pbcopy<CR>
 
 nnoremap <Leader>- :CleverSplit<CR>
 
-" easymotion {{{
-" Turn on case insensitive feature
-let g:EasyMotion_smartcase = 1
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
-
-map  <Leader><Leader> <Plug>(easymotion-bd-w)
-nmap <Leader><Leader> <Plug>(easymotion-overwin-w)
-" }}}
-
 " vim-test
 nmap <Leader>q :TestFile<CR>
 nmap <Leader>Q :TestNearest<CR>

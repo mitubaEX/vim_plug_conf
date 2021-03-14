@@ -31,8 +31,6 @@ Plug 'rhysd/vim-operator-surround'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 
-Plug 'Lokaltog/vim-easymotion'
-
 " https://tyru.hatenablog.com/entry/2020/04/26/110000
 Plug 'tyru/columnskip.vim'
 
