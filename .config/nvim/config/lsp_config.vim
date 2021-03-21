@@ -66,6 +66,8 @@ nmap K :LspPeekDefinition<CR>
 
 nmap gd :LspDefinition<CR>
 
+nmap gl :LspReferences<CR>
+
 nmap gr :LspRename<CR>
 
 nmap gt :LspTypeDefinition<CR>
