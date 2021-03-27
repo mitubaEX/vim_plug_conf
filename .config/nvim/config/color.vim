@@ -78,5 +78,7 @@ syntax enable
 " }}}
 
 " elly {{{
-colorscheme elly
+" colorscheme elly
 " }}}
+
+colorscheme gruvbox

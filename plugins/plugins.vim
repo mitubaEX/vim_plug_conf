@@ -6,7 +6,9 @@ call plug#begin('~/.vim/plugged')
 source $HOME/plugins/lang.vim
 
 " color schema
-Plug 'ulwlu/elly.vim' 
+Plug 'ulwlu/elly.vim'
+Plug 'morhetz/gruvbox'
+Plug 'shinchu/lightline-gruvbox.vim'
 
 Plug 'voldikss/vim-floaterm'
 
@@ -75,7 +77,7 @@ Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 Plug 'lambdalisue/nerdfont.vim'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim' 
+Plug 'junegunn/fzf.vim'
 
 Plug 'itchyny/lightline.vim'
 

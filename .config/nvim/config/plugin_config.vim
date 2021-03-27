@@ -183,7 +183,7 @@ let g:csv_delim=','
 let g:csv_highlight_column = 'y'
 let g:csv_hiGroup = 'Visual'
 
-" SirVer/ultisnips 
+" SirVer/ultisnips
 let g:UltiSnipsExpandTrigger="<c-f>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
@@ -214,7 +214,7 @@ augroup END
 set noshowmode
 let g:lightline = {
      \ 'separator': { 'left': '', 'right': '' },
-     \ 'colorscheme': 'elly',
+     \ 'colorscheme': 'gruvbox',
      \ 'subseparator': { 'left': '', 'right': '' },
      \ 'tabline': {
      \   'left': [['tabs']],
