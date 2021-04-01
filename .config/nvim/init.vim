@@ -27,6 +27,7 @@ source $HOME/.config/nvim/config/lsp_config.vim
 lua << EOF
 require'lspconfig'.tsserver.setup{}
 require'lspconfig'.solargraph.setup{}
+require'lspconfig'.yamlls.setup{}
 EOF
 " Use completion-nvim in every buffer
 autocmd BufEnter * lua require'completion'.on_attach()
