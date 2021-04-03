@@ -25,8 +25,11 @@ source $HOME/.config/nvim/config/lsp_config.vim
 " EOF
 
 lua << EOF
-require'lspconfig'.tsserver.setup{}
+require'lspconfig'.tsserver.setup{
+  filetypes = {'typescript', 'typescript.tsx', 'typescriptreact'}
+}
 require'lspconfig'.solargraph.setup{}
+require'lspconfig'.flow.setup{}
 require'lspconfig'.yamlls.setup{}
 EOF
 " Use completion-nvim in every buffer
