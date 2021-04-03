@@ -9,6 +9,7 @@ source $HOME/plugins/lang.vim
 Plug 'ulwlu/elly.vim'
 Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
+Plug 'sainnhe/sonokai'
 
 Plug 'voldikss/vim-floaterm'
 
