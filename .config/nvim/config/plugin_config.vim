@@ -214,7 +214,6 @@ augroup END
 set noshowmode
 let g:lightline = {
      \ 'separator': { 'left': '', 'right': '' },
-     \ 'colorscheme': 'gruvbox',
      \ 'subseparator': { 'left': '', 'right': '' },
      \ 'tabline': {
      \   'left': [['tabs']],
