@@ -26,7 +26,7 @@ source $HOME/.config/nvim/config/lsp_config.vim
 
 lua << EOF
 require'lspconfig'.tsserver.setup{
-  filetypes = {'typescript', 'typescript.tsx', 'typescriptreact'}
+  -- filetypes = {'typescript', 'typescript.tsx', 'typescriptreact'}
 }
 require'lspconfig'.solargraph.setup{}
 require'lspconfig'.flow.setup{}
