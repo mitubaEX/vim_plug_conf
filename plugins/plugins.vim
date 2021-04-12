@@ -95,5 +95,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'aklt/plantuml-syntax'
 Plug 'weirongxu/plantuml-previewer.vim'
 
+Plug 'easymotion/vim-easymotion'
+
 " Initialize plugin system
 call plug#end()
