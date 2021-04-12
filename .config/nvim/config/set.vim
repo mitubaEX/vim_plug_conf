@@ -80,3 +80,6 @@ set undodir=$HOME/.vim/undodir
 
 " tablineを表示する
 set showtabline=2
+
+" for 4k monitor
+set lazyredraw
