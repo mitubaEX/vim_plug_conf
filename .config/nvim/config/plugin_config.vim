@@ -187,6 +187,11 @@ let g:csv_hiGroup = 'Visual'
 let g:UltiSnipsExpandTrigger="<c-f>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+call asyncomplete#register_source(asyncomplete#sources#ultisnips#get_source_options({
+                  \ 'name': 'ultisnips',
+                  \ 'allowlist': ['*'],
+                  \ 'completor': function('asyncomplete#sources#ultisnips#completor'),
+                  \ }))
 
 " itchyny/lightline.vim {{{
 " ref: https://kitagry.github.io/blog/programmings/2020/08/lightline-vim-lsp/
