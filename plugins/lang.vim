@@ -16,9 +16,7 @@ Plug 'chrisbra/csv.vim', { 'for': 'csv' }
 
 " ultisnips
 Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-ultisnips.vim'
+" Plug 'honza/vim-snippets'
 
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascriptreact', 'typescript', 'typescriptreact'] }
 Plug 'leafgarland/typescript-vim', { 'for': ['javascript', 'javascriptreact', 'typescript', 'typescriptreact'] }

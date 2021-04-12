@@ -41,5 +41,7 @@ autocmd BufNewFile *_spec.rb 0r ~/.config/nvim/template/template_spec.rb
 " remove all trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
+let g:completion_enable_snippet = 'UltiSnips'
+
 " polyglot(vim-markdown)
 let g:vim_markdown_conceal_code_blocks = 0
