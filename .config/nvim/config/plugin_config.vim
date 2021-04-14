@@ -185,7 +185,7 @@ let g:csv_hiGroup = 'Visual'
 
 " SirVer/ultisnips
 let g:UltiSnipsExpandTrigger="<c-f>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpForwardTrigger="<c-e>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " itchyny/lightline.vim {{{
