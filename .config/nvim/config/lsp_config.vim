@@ -88,6 +88,10 @@ nmap gl :LspReferences<CR>
 nmap gr :LspRename<CR>
 
 nmap gt :LspTypeDefinition<CR>
+
+nmap gc :LspDocumentDiagnostics<CR>
+
+nmap ga :LspCodeAction<CR>
 " }}}
 " let g:lsp_log_verbose = 1
 " let g:lsp_log_file = expand('~/vim-lsp.log')
