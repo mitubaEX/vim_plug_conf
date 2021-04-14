@@ -67,7 +67,7 @@ nnoremap <silent> [vim-fugitive]a  :<C-u>Gwrite<CR>
 " nnoremap <silent> [vim-fugitive]c  :<C-u>Gcommit<CR>
 
 " browse
-nnoremap <silent> [vim-fugitive]w  :<C-u>Gbrowse<CR>
+nnoremap <silent> [vim-fugitive]o  :<C-u>GBrowse<CR>
 
 """ Gina
 " grep

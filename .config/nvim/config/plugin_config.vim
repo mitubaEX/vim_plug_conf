@@ -174,7 +174,7 @@ call wilder#set_option('modes', ['/', '?', ':'])
 " in millisecond, used for both CursorHold and CursorHoldI,
 " use updatetime instead if not defined
 let g:cursorhold_updatetime = 100
-let g:fern#smart_cursor = 'hide'
+let g:fern#hide_cursor = 'hide'
 let g:fern#renderer = "nerdfont"
 "}}}
 
