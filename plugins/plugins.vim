@@ -8,7 +8,7 @@ source $HOME/plugins/lang.vim
 " color schema
 Plug 'ulwlu/elly.vim'
 Plug 'morhetz/gruvbox'
-Plug 'shinchu/lightline-gruvbox.vim'
+" Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'sainnhe/sonokai'
 
 Plug 'voldikss/vim-floaterm'
@@ -80,7 +80,10 @@ Plug 'lambdalisue/nerdfont.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-Plug 'itchyny/lightline.vim'
+" Plug 'itchyny/lightline.vim'
+Plug 'hoob3rt/lualine.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'ryanoasis/vim-devicons'
 
 " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 

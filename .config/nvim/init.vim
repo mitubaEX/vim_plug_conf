@@ -24,24 +24,5 @@ source $HOME/.config/nvim/config/lsp_config.vim
 " }
 " EOF
 
-lua << EOF
-require'lspconfig'.tsserver.setup{
-  -- filetypes = {'typescript', 'typescript.tsx', 'typescriptreact'}
-}
-require'lspconfig'.solargraph.setup{}
-require'lspconfig'.flow.setup{}
-require'lspconfig'.yamlls.setup{}
-EOF
-" Use completion-nvim in every buffer
-autocmd BufEnter * lua require'completion'.on_attach()
-
-" open spec template
-autocmd BufNewFile *_spec.rb 0r ~/.config/nvim/template/template_spec.rb
-
-" remove all trailing whitespace on save
-autocmd BufWritePre * %s/\s\+$//e
-
-let g:completion_enable_snippet = 'vim-vsnip'
-
 " polyglot(vim-markdown)
 let g:vim_markdown_conceal_code_blocks = 0

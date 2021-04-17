@@ -191,72 +191,72 @@ let g:csv_hiGroup = 'Visual'
 
 " itchyny/lightline.vim {{{
 " ref: https://kitagry.github.io/blog/programmings/2020/08/lightline-vim-lsp/
-function! LightlineLSPWarnings() abort
-  let l:counts = lsp#get_buffer_diagnostics_counts()
-  return l:counts.warning == 0 ? '' : printf('W:%d', l:counts.warning)
-endfunction
-
-function! LightlineLSPErrors() abort
-  let l:counts = lsp#get_buffer_diagnostics_counts()
-  return l:counts.error == 0 ? '' : printf('E:%d', l:counts.error)
-endfunction
-
-function! LightlineLSPOk() abort
-  let l:counts =  lsp#get_buffer_diagnostics_counts()
-  let l:total = l:counts.error + l:counts.warning
-  return l:total == 0 ? '' : ''
-endfunction
-
-augroup LightLineOnLSP
-  autocmd!
-  autocmd User lsp_diagnostics_updated call lightline#update()
-augroup END
-
-set noshowmode
-let g:lightline = {
-     \ 'separator': { 'left': '', 'right': '' },
-     \ 'subseparator': { 'left': '', 'right': '' },
-     \ 'tabline': {
-     \   'left': [['tabs']],
-     \   'right': [['close'], ['gitbranch', 'wifi', 'battery']],
-     \ },
-     \ 'active': {
-     \   'left': [
-     \     ['mode', 'paste'],
-     \     [ 'gitbranch', 'readonly', 'filename', 'modified' ],
-     \     [ 'lsp_errors', 'lsp_warnings', 'lsp_ok' ],
-     \   ],
-     \   'right': [
-     \     [ 'lineinfo' ],
-     \     [ 'percent' ],
-     \     [ 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ],
-     \  ],
-     \ },
-     \ 'component': {
-     \   'charvaluehex': '0x%B'
-     \ },
-     \ 'component_function': {
-     \   'cwd': 'getcwd',
-     \   'wifi': 'wifi#component',
-     \   'battery': 'battery#component',
-     \   'gitbranch': 'fugitive#head',
-     \   'filename': 'LightLineFilename',
-     \ },
-     \ 'component_expand': {
-     \   'lsp_warnings': 'LightlineLSPWarnings',
-     \   'lsp_errors':   'LightlineLSPErrors',
-     \   'lsp_ok':       'LightlineLSPOk',
-     \ },
-     \ 'component_type': {
-     \   'lsp_warnings': 'warning',
-     \   'lsp_errors':   'error',
-     \   'lsp_ok':       'middle',
-     \ },
-     \ }
-
-function! LightLineFilename()
-  return expand('%')
-endfunction
+" function! LightlineLSPWarnings() abort
+"   let l:counts = lsp#get_buffer_diagnostics_counts()
+"   return l:counts.warning == 0 ? '' : printf('W:%d', l:counts.warning)
+" endfunction
+"
+" function! LightlineLSPErrors() abort
+"   let l:counts = lsp#get_buffer_diagnostics_counts()
+"   return l:counts.error == 0 ? '' : printf('E:%d', l:counts.error)
+" endfunction
+"
+" function! LightlineLSPOk() abort
+"   let l:counts =  lsp#get_buffer_diagnostics_counts()
+"   let l:total = l:counts.error + l:counts.warning
+"   return l:total == 0 ? '' : ''
+" endfunction
+"
+" augroup LightLineOnLSP
+"   autocmd!
+"   autocmd User lsp_diagnostics_updated call lightline#update()
+" augroup END
+"
+" set noshowmode
+" let g:lightline = {
+"     \ 'separator': { 'left': '', 'right': '' },
+"     \ 'subseparator': { 'left': '', 'right': '' },
+"     \ 'tabline': {
+"     \   'left': [['tabs']],
+"     \   'right': [['close'], ['gitbranch', 'wifi', 'battery']],
+"     \ },
+"     \ 'active': {
+"     \   'left': [
+"     \     ['mode', 'paste'],
+"     \     [ 'gitbranch', 'readonly', 'filename', 'modified' ],
+"     \     [ 'lsp_errors', 'lsp_warnings', 'lsp_ok' ],
+"     \   ],
+"     \   'right': [
+"     \     [ 'lineinfo' ],
+"     \     [ 'percent' ],
+"     \     [ 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ],
+"     \  ],
+"     \ },
+"     \ 'component': {
+"     \   'charvaluehex': '0x%B'
+"     \ },
+"     \ 'component_function': {
+"     \   'cwd': 'getcwd',
+"     \   'wifi': 'wifi#component',
+"     \   'battery': 'battery#component',
+"     \   'gitbranch': 'fugitive#head',
+"     \   'filename': 'LightLineFilename',
+"     \ },
+"     \ 'component_expand': {
+"     \   'lsp_warnings': 'LightlineLSPWarnings',
+"     \   'lsp_errors':   'LightlineLSPErrors',
+"     \   'lsp_ok':       'LightlineLSPOk',
+"     \ },
+"     \ 'component_type': {
+"     \   'lsp_warnings': 'warning',
+"     \   'lsp_errors':   'error',
+"     \   'lsp_ok':       'middle',
+"     \ },
+"     \ }
+"
+" function! LightLineFilename()
+"   return expand('%')
+" endfunction
 " }}}
 
 " matze/vim-move
@@ -343,3 +343,30 @@ let b:coc_suggest_disable = 1
 "   }
 " }
 " EOF
+
+" lualine {{{
+lua << EOF
+require('lualine').setup{
+  options = {
+    theme = 'gruvbox',
+    icons_enabled = true,
+  },
+  sections = {
+    lualine_a = { {'mode', upper = true} },
+    lualine_b = { {'branch', icon = ''} },
+    lualine_c = { {'filename', file_status = true} },
+    lualine_x = { 'encoding', 'fileformat', 'filetype' },
+    lualine_y = { 'progress' },
+    lualine_z = { 'location'  },
+  },
+  inactive_sections = {
+    lualine_a = {  },
+    lualine_b = {  },
+    lualine_c = { 'filename' },
+    lualine_x = { 'location' },
+    lualine_y = {  },
+    lualine_z = {  },
+  },
+}
+EOF
+" }}}
