@@ -2,8 +2,10 @@
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['javascript', 'javascriptreact', 'typescript', 'typescriptreact']}
 
 Plug 'sheerun/vim-polyglot'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
+" Plug 'prabirshrestha/vim-lsp'
+" Plug 'mattn/vim-lsp-settings'
+Plug 'nvim-lua/completion-nvim'
+Plug 'neovim/nvim-lspconfig'
 Plug 'onsails/lspkind-nvim'
 
 Plug 'glepnir/lspsaga.nvim'
