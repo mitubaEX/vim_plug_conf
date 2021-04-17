@@ -46,13 +46,9 @@ tnoremap <silent> <ESC> <C-\><C-n>
 " deoplete tab-complete
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
-
-" >>>>>>>>>>>>>>>>git>>>>>>>>>>>>>>>>>>>>
+" git config {{{
 nnoremap [vim-fugitive] <Nop>
 nmap <C-g> [vim-fugitive]
-
-" status
-" nnoremap <silent> [vim-fugitive]s  :<C-u>Gstatus<CR>
 
 " diff
 nnoremap <silent> [vim-fugitive]d  :<C-u>Gdiff<CR>
@@ -63,9 +59,6 @@ nnoremap <silent> [vim-fugitive]b  :<C-u>Git blame<CR>
 " add
 nnoremap <silent> [vim-fugitive]a  :<C-u>Gwrite<CR>
 
-" commit
-" nnoremap <silent> [vim-fugitive]c  :<C-u>Gcommit<CR>
-
 " browse
 nnoremap <silent> [vim-fugitive]o  :<C-u>GBrowse<CR>
 
@@ -73,15 +66,11 @@ nnoremap <silent> [vim-fugitive]o  :<C-u>GBrowse<CR>
 " grep
 nnoremap <C-g>g  :<C-u>Gina grep<CR>
 
-" diff
-" nnoremap <C-g>d  :<C-u>Gina diff<CR>
-
 " commit
 nnoremap <C-g>c  :<C-u>Gina commit -v<CR>
 
 " status
 nnoremap <C-g>s  :<C-u>Gina status<CR>
-
 
 " log
 function! s:gLogCurrentFile() abort
@@ -90,40 +79,38 @@ function! s:gLogCurrentFile() abort
 endfunction
 command! -nargs=* GLogCurrentFile call s:gLogCurrentFile()
 nnoremap <C-g>l  :<C-u>GLogCurrentFile<CR>
-" >>>>>>>>>>>>>>>>git>>>>>>>>>>>>>>>>>>>>
+" }}}
 
+" copy 0 register
 noremap <Leader>p "0p
 noremap <Leader>P "0P
 vnoremap <Leader>p "0p
 
+" noh
 nnoremap <Esc><Esc> :noh<CR>
 
 " insert new line without entering insert mode
 nnoremap <Leader>o o<Esc>
 
-" indent all lines
-map <Leader>= gg=G<C-o><C-o>
-
 " fern
 nnoremap <Leader>d :Fern . -reveal=% -drawer -toggle<CR>
 
-" pbcopy filename
+" pbcopy filename {{{
 "" only filename
 nmap <Leader>c :!echo "%:t" \| pbcopy<CR>
 "" relative path
 nmap <Leader>C :!echo "%" \| pbcopy<CR>
+" }}}
 
+" clever split
 nnoremap <Leader>- :CleverSplit<CR>
 
 " vim-test
 nmap <Leader>q :TestFile<CR>
 nmap <Leader>Q :TestNearest<CR>
 
-""" floaterm
+" floaterm
 nmap <Leader>[ :FloatermToggle<CR>
-
-" float_timer
-" nnoremap <Leader>f :FloatTimer 25<CR>
 
 " reload config file
 nnoremap <Leader>R :so ~/.config/nvim/init.vim<CR>
@@ -146,12 +133,13 @@ nmap ; :Buffers<CR>
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 let g:fzf_tags_command = 'ctags -R --exclude=.git --exclude=node_modules --exclude=test --exclude=spec --exclude=vendor'
 
-" any junmp
+" any junmp {{{
 " Normal mode: Jump to definition under cursore
 nnoremap <leader>a :AnyJump<CR>
 
 " Visual mode: jump to selected text in visual mode
 xnoremap <leader>a :AnyJumpVisual<CR>
+" }}}
 
 " easymotion {{{
 " Turn on case insensitive feature

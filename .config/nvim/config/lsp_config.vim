@@ -1,77 +1,19 @@
-" deoplete
-" let g:deoplete#enable_at_startup = 0
-"
-" function! s:check_back_space() abort
-"   let col = col('.') - 1
-"   return !col || getline('')[col - 1]  =~ '\s'
-" endfunction
-" call deoplete#custom#option('keyword_patterns', {
-"      \ '_': '[a-zA-Z_]\k*\(?',
-"      \ })
-" call deoplete#custom#option('camel_case', v:true)
-" " <TAB>: completion.
-" inoremap <silent><expr> <TAB>
-"      \ pumvisible() ? "\<C-n>" :
-"      \ <SID>check_back_space() ? "\<TAB>" :
-"      \ deoplete#manual_complete()
-" call deoplete#custom#source('_', 'converters', [
-"      \ 'converter_remove_paren',
-"      \ 'converter_remove_overlap',
-"      \ 'matcher_length',
-"      \ 'converter_truncate_abbr',
-"      \ 'converter_truncate_menu',
-"      \ 'converter_auto_delimiter',
-"      \ ])
-
 " solargraph
 " When enter rails project, run bellow commands
 " $ gem install solargraph
 " $ solargraph download-core
 " $ solargraph bundle
 " $ solargraph config
-" if executable('solargraph')
-"     augroup LspRuby
-"         autocmd!
-"         autocmd User lsp_setup call lsp#register_server({
-"                   \ 'name': 'solargraph',
-"                   \ 'cmd': {server_info->[&shell, &shellcmdflag, 'solargraph stdio']},
-"                   \ 'initialization_options': {"diagnostics": "true"},
-"                   \ 'allowlist': ['ruby'],
-"                   \ })
-"     augroup END
-" endif
 
 " typescript
 " install commands
 " $ npm install -g typescript typescript-language-server
-" if executable('typescript-language-server')
-"     augroup LspTypeScript
-"         autocmd!
-"         autocmd User lsp_setup call lsp#register_server({
-"                   \ 'name': 'typescript-language-server',
-"                   \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
-"                   \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'tsconfig.json'))},
-"                   \ 'allowlist': ['typescript', 'typescript.tsx', 'typescriptreact'],
-"                   \ })
-"     augroup END
-" endif
 
 " flowtype
 " install commands
 " $ npm install -g flow-language-server
 " $ npm install -g flow-bin@0.108.0
 " $ npm install -g flow-typed@2.6.2
-if executable('flow-language-server')
-    augroup LspTypeScript
-        autocmd!
-        autocmd User lsp_setup call lsp#register_server({
-                   \ 'name': 'flow-language-server',
-                   \ 'cmd': {server_info->[&shell, &shellcmdflag, 'flow-language-server --stdio']},
-                   \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), '.flowconfig'))},
-                   \ 'allowlist': ['javascript'],
-                   \ })
-    augroup END
-endif
 
 " typescript file type
 autocmd bufnewfile,bufread *.tsx set filetype=typescriptreact
@@ -96,26 +38,6 @@ autocmd BufWritePre * %s/\s\+$//e
 
 let g:completion_enable_snippet = 'vim-vsnip'
 
-" keybinds {{{
-" check definition
-" nmap K :LspPeekDefinition<CR>
-
-" nmap gd :LspDefinition<CR>
-
-" nmap gl :LspReferences<CR>
-
-" nmap gr :LspRename<CR>
-
-" nmap gt :LspTypeDefinition<CR>
-
-" nmap gc :LspDocumentDiagnostics<CR>
-
-" nmap ga :LspCodeAction<CR>
-" }}}
-" let g:lsp_log_verbose = 1
-" let g:lsp_log_file = expand('~/vim-lsp.log')
-
-
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -127,13 +49,6 @@ set completeopt=menuone,noinsert,noselect
 set shortmess+=c
 
 let g:completion_timer_cycle = 30
-
-" vim-lsp-settings config
-" let g:lsp_settings = {
-"\  'typescript-language-server': {
-"\    'blocklist': ['javascript'],
-"\  },
-"\}
 
 lua << EOF
 -- commented options are defaults
@@ -175,16 +90,8 @@ vnoremap <silent>ga :<C-U>Lspsaga range_code_action<CR>
 nnoremap <silent> gh :Lspsaga lsp_finder<CR>
 
 nnoremap <silent>K :Lspsaga hover_doc<CR>
-" scroll down hover doc or scroll in definition preview
-" nnoremap <silent> <C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>
-" scroll up hover doc
-" nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>
-
-" nnoremap <silent> gs :Lspsaga signature_help<CR>
 
 nnoremap <silent>gr :Lspsaga rename<CR>
-
-" nnoremap <silent> gd :Lspsaga preview_definition<CR>
 
 nnoremap <silent> [e :Lspsaga diagnostic_jump_next<CR>
 nnoremap <silent> ]e :Lspsaga diagnostic_jump_prev<CR>
