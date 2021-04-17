@@ -58,7 +58,7 @@ nmap <C-g> [vim-fugitive]
 nnoremap <silent> [vim-fugitive]d  :<C-u>Gdiff<CR>
 
 " blame
-nnoremap <silent> [vim-fugitive]b  :<C-u>Gblame<CR>
+nnoremap <silent> [vim-fugitive]b  :<C-u>Git blame<CR>
 
 " add
 nnoremap <silent> [vim-fugitive]a  :<C-u>Gwrite<CR>
