@@ -354,7 +354,24 @@ require('lualine').setup{
   sections = {
     lualine_a = { {'mode', upper = true} },
     lualine_b = { {'branch', icon = ''} },
-    lualine_c = { {'filename', file_status = true}, {'diagnostics', sources = {'nvim_lsp'}} },
+    lualine_c = { {'filename', file_status = true, full_path = true}, {
+      -- Lsp server name .
+      -- ref: https://gist.github.com/shadmansaleh/cd526bc166237a5cbd51429cc1f6291b
+      function ()
+        local msg = 'No Active Lsp'
+        local buf_ft = vim.api.nvim_buf_get_option(0,'filetype')
+        local clients = vim.lsp.get_active_clients()
+        if next(clients) == nil then return msg end
+        for _, client in ipairs(clients) do
+          local filetypes = client.config.filetypes
+          if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
+            return client.name
+          end
+        end
+        return msg
+      end,
+      icon = ' LSP:'
+    }, {'diagnostics', sources = {'nvim_lsp'}} },
     lualine_x = { 'encoding', 'fileformat', 'filetype' },
     lualine_y = { 'progress' },
     lualine_z = { 'location'  },
