@@ -107,6 +107,8 @@ set completeopt=menuone,noinsert,noselect
 " Avoid showing message extra message when using completion
 set shortmess+=c
 
+let g:completion_timer_cycle = 30
+
 " vim-lsp-settings config
 " let g:lsp_settings = {
 "\  'typescript-language-server': {
@@ -183,3 +185,17 @@ autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync(nil, 100)
 autocmd BufWritePre *.ts lua vim.lsp.buf.formatting_sync(nil, 100)
 autocmd BufWritePre *.tsx lua vim.lsp.buf.formatting_sync(nil, 100)
 autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
+
+" vsnip
+" Expand
+imap <expr> <C-f>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
+smap <expr> <C-f>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'
+" Jump forward or backward
+imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
+smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
+imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
+smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
+" If you want to use snippet for multiple filetypes, you can `g:vsnip_filetypes` for it.
+let g:vsnip_filetypes = {}
+let g:vsnip_filetypes.javascriptreact = ['javascript']
+let g:vsnip_filetypes.typescriptreact = ['typescript']

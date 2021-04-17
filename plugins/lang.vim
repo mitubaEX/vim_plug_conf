@@ -11,6 +11,10 @@ Plug 'onsails/lspkind-nvim'
 
 Plug 'glepnir/lspsaga.nvim'
 
+Plug 'rafamadriz/friendly-snippets'
+Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
+
 " solargraph config
 " ref: https://eitoball.hatenablog.com/entry/2019/12/02/033349
 " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -20,7 +24,7 @@ Plug 'glepnir/lspsaga.nvim'
 Plug 'chrisbra/csv.vim', { 'for': 'csv' }
 
 " ultisnips
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 " Plug 'honza/vim-snippets'
 
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascriptreact', 'typescript', 'typescriptreact'] }
