@@ -94,5 +94,7 @@ Plug 'weirongxu/plantuml-previewer.vim'
 
 Plug 'easymotion/vim-easymotion'
 
+Plug 'tweekmonster/startuptime.vim'
+
 " Initialize plugin system
 call plug#end()
