@@ -8,15 +8,11 @@ source $HOME/plugins/lang.vim
 " color schema
 Plug 'ulwlu/elly.vim'
 Plug 'morhetz/gruvbox'
-" Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'sainnhe/sonokai'
 
 Plug 'voldikss/vim-floaterm'
 
 Plug 'rhysd/accelerated-jk'
-Plug 'thinca/vim-quickrun'
-Plug 'tyru/caw.vim'
-Plug 'matze/vim-move'
 
 " git
 Plug 'tpope/vim-rhubarb'
@@ -37,23 +33,26 @@ Plug 'tpope/vim-repeat'
 " https://tyru.hatenablog.com/entry/2020/04/26/110000
 Plug 'tyru/columnskip.vim'
 
-Plug 'mitubaEX/jumpy.vim'
-Plug 'bkad/CamelCaseMotion'
-
 Plug 'AndrewRadev/tagalong.vim'
 Plug 'cohama/lexima.vim'
 Plug 'alvan/vim-closetag'
-Plug 'rhysd/clever-split.vim'
 
+" test
+Plug 'vim-test/vim-test'
+
+" util
+Plug 'mitubaEX/jumpy.vim'
+Plug 'rhysd/clever-split.vim'
+Plug 'tyru/caw.vim'
+Plug 'matze/vim-move'
+Plug 'bkad/CamelCaseMotion'
 Plug 'brooth/far.vim'
 Plug 'deris/vim-rengbang'
 Plug 'tyru/open-browser.vim'
-Plug 'vim-test/vim-test'
 Plug 'AndrewRadev/linediff.vim'
 Plug 'pechorin/any-jump.vim'
 Plug 't9md/vim-quickhl'
 Plug 'mhinz/vim-startify'
-Plug 'Yggdroot/indentLine'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-speeddating'
@@ -61,12 +60,13 @@ Plug 'itchyny/vim-cursorword'
 Plug 'machakann/vim-highlightedyank'
 Plug 'edkolev/tmuxline.vim'
 
+" indent
+Plug 'Yggdroot/indentLine'
+
 " <Leader>r<word obj> replace word
 Plug 'kana/vim-operator-user'
 
 Plug 'osyo-manga/vim-operator-stay-cursor'
-Plug 'lambdalisue/wifi.vim'
-Plug 'lambdalisue/battery.vim'
 Plug 'wellle/targets.vim'
 
 Plug 'gelguy/wilder.nvim'
@@ -80,7 +80,7 @@ Plug 'lambdalisue/nerdfont.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-" Plug 'itchyny/lightline.vim'
+" lualine
 Plug 'hoob3rt/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
@@ -92,6 +92,7 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
+" plant uml
 Plug 'aklt/plantuml-syntax'
 Plug 'weirongxu/plantuml-previewer.vim'
 

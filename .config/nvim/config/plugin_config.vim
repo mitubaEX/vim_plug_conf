@@ -7,24 +7,6 @@ let g:floaterm_autoclose=1
 nmap j <Plug>(accelerated_jk_gj)
 nmap k <Plug>(accelerated_jk_gk)
 
-" quickrun
-let g:quickrun_config = {
-\   'haskell' : { 'type' : 'haskell/stack' },
-\   'haskell/stack' : {
-\       'command' : 'stack',
-\       'exec' : '%c %o %s %a',
-\       'cmdopt' : 'runghc',
-\   },
-\   'go': {
-\     'command': 'go',
-\     'exec': '%c run %a',
-\     'args': '**/*.go',
-\     'tempfile': '%{tempname()}.go',
-\     'hook/output_encode/encoding': 'utf-8',
-\     'hook/cd/directory': '%S:p:h',
-\   },
-\}
-
 " rhysd/vim-operator-surround
 " saiw(: aaa -> (aaa)
 map <silent>sa <Plug>(operator-surround-append)
