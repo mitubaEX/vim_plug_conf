@@ -83,3 +83,5 @@ set showtabline=2
 
 " for 4k monitor
 set lazyredraw
+
+set cursorline
