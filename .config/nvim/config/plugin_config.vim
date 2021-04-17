@@ -166,11 +166,6 @@ let g:csv_delim=','
 let g:csv_highlight_column = 'y'
 let g:csv_hiGroup = 'Visual'
 
-" SirVer/ultisnips
-" let g:UltiSnipsExpandTrigger="<c-f>"
-" let g:UltiSnipsJumpForwardTrigger="<c-e>"
-" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
 " itchyny/lightline.vim {{{
 " ref: https://kitagry.github.io/blog/programmings/2020/08/lightline-vim-lsp/
 " function! LightlineLSPWarnings() abort
