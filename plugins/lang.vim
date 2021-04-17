@@ -6,6 +6,8 @@ Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
 Plug 'onsails/lspkind-nvim'
 
+Plug 'glepnir/lspsaga.nvim'
+
 " solargraph config
 " ref: https://eitoball.hatenablog.com/entry/2019/12/02/033349
 " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }

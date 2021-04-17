@@ -79,19 +79,19 @@ autocmd bufnewfile,bufread *.jsx set filetype=javascriptreact
 
 " keybinds {{{
 " check definition
-nmap K :LspPeekDefinition<CR>
+" nmap K :LspPeekDefinition<CR>
 
-nmap gd :LspDefinition<CR>
+" nmap gd :LspDefinition<CR>
 
-nmap gl :LspReferences<CR>
+" nmap gl :LspReferences<CR>
 
-nmap gr :LspRename<CR>
+" nmap gr :LspRename<CR>
 
-nmap gt :LspTypeDefinition<CR>
+" nmap gt :LspTypeDefinition<CR>
 
-nmap gc :LspDocumentDiagnostics<CR>
+" nmap gc :LspDocumentDiagnostics<CR>
 
-nmap ga :LspCodeAction<CR>
+" nmap ga :LspCodeAction<CR>
 " }}}
 " let g:lsp_log_verbose = 1
 " let g:lsp_log_file = expand('~/vim-lsp.log')
@@ -142,3 +142,28 @@ require('lspkind').init({
     },
 })
 EOF
+
+lua << EOF
+local saga = require 'lspsaga'
+saga.init_lsp_saga()
+EOF
+
+nnoremap <silent>ga :Lspsaga code_action<CR>
+vnoremap <silent>ga :<C-U>Lspsaga range_code_action<CR>
+
+nnoremap <silent> gh :Lspsaga lsp_finder<CR>
+
+nnoremap <silent>K :Lspsaga hover_doc<CR>
+" scroll down hover doc or scroll in definition preview
+nnoremap <silent> <C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>
+" scroll up hover doc
+nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>
+
+nnoremap <silent> gs :Lspsaga signature_help<CR>
+
+nnoremap <silent>gr :Lspsaga rename<CR>
+
+nnoremap <silent> gd :Lspsaga preview_definition<CR>
+
+nnoremap <silent> [e :Lspsaga diagnostic_jump_next<CR>
+nnoremap <silent> ]e :Lspsaga diagnostic_jump_prev<CR>
