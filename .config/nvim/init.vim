@@ -26,3 +26,13 @@ source $HOME/.config/nvim/config/lsp_config.vim
 
 " polyglot(vim-markdown)
 let g:vim_markdown_conceal_code_blocks = 0
+
+" typescript file type
+autocmd bufnewfile,bufread *.tsx set filetype=typescriptreact
+autocmd bufnewfile,bufread *.jsx set filetype=javascriptreact
+
+" open spec template
+autocmd BufNewFile *_spec.rb 0r ~/.config/nvim/template/template_spec.rb
+
+" remove all trailing whitespace on save
+autocmd BufWritePre * %s/\s\+$//e
