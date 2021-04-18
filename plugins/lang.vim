@@ -3,9 +3,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['javascript', 'javascrip
 
 Plug 'sheerun/vim-polyglot'
 
-Plug 'nvim-lua/completion-nvim'
+" Plug 'nvim-lua/completion-nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'onsails/lspkind-nvim'
+Plug 'hrsh7th/nvim-compe'
 
 Plug 'glepnir/lspsaga.nvim'
 
