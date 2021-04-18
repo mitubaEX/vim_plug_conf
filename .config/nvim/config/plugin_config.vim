@@ -261,7 +261,7 @@ require('lualine').setup{
   sections = {
     lualine_a = { {'mode', upper = true} },
     lualine_b = { {'branch', icon = ''} },
-    lualine_c = { {'filename', file_status = true, full_path = true}, {
+    lualine_c = { {'filename', file_status = true}, {
       -- Lsp server name .
       -- ref: https://gist.github.com/shadmansaleh/cd526bc166237a5cbd51429cc1f6291b
       function ()
