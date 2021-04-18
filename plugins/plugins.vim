@@ -100,5 +100,7 @@ Plug 'easymotion/vim-easymotion'
 
 Plug 'tweekmonster/startuptime.vim'
 
+Plug 'tpope/vim-endwise'
+
 " Initialize plugin system
 call plug#end()
