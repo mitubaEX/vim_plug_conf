@@ -84,4 +84,6 @@ set undodir=$HOME/.vim/undodir
 " for 4k monitor
 set lazyredraw
 
-set cursorline
+" set cursorline
+set synmaxcol=128
+syntax sync minlines=256

@@ -19,3 +19,5 @@ Plug 'chrisbra/csv.vim', { 'for': 'csv' }
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascriptreact', 'typescript', 'typescriptreact'] }
 Plug 'leafgarland/typescript-vim', { 'for': ['javascript', 'javascriptreact', 'typescript', 'typescriptreact'] }
 Plug 'maxmellon/vim-jsx-pretty', { 'for': ['javascript', 'javascriptreact', 'typescript', 'typescriptreact'] }
+
+Plug 'liuchengxu/vista.vim'

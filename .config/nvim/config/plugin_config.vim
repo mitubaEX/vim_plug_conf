@@ -280,7 +280,12 @@ require('lualine').setup{
         return msg
       end,
       icon = ' LSP:'
-    }, {'diagnostics', sources = {'nvim_lsp'}} },
+    }, {'diagnostics', sources = {'nvim_lsp'}}, {
+      function ()
+        return vim.b.vista_nearest_method_or_function
+      end,
+      icon = 'ƒ:'
+    }},
     lualine_x = { 'encoding', 'fileformat', 'filetype' },
     lualine_y = { 'progress' },
     lualine_z = { 'location'  },
