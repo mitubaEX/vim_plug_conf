@@ -102,5 +102,9 @@ Plug 'tweekmonster/startuptime.vim'
 
 Plug 'tpope/vim-endwise'
 
+Plug 'tpope/vim-projectionist'
+
+Plug 'vuciv/vim-bujo'
+
 " Initialize plugin system
 call plug#end()
