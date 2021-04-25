@@ -39,6 +39,7 @@ Plug 'alvan/vim-closetag'
 
 " test
 Plug 'vim-test/vim-test'
+Plug 'rcarriga/vim-ultest', { 'do': ':UpdateRemotePlugins' }
 
 " util
 Plug 'mitubaEX/jumpy.vim'

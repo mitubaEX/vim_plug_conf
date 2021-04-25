@@ -106,8 +106,8 @@ nmap <Leader>C :!echo "%" \| pbcopy<CR>
 nnoremap <Leader>- :CleverSplit<CR>
 
 " vim-test
-nmap <Leader>q :TestFile<CR>
-nmap <Leader>Q :TestNearest<CR>
+" nmap <Leader>q :TestFile<CR>
+" nmap <Leader>Q :TestNearest<CR>
 
 " floaterm
 nmap <Leader>[ :FloatermToggle<CR>
@@ -152,3 +152,10 @@ nmap <Leader>e <Plug>(easymotion-overwin-w)
 
 " open terminal in vsplit
 nnoremap <Leader>= :vs +te<CR>
+
+" move ultest popup window
+nmap <Leader>u <Plug>(ultest-output-jump)
+nmap <Leader>q :Ultest<CR>
+nmap <Leader>Q :UltestNearest<CR>
+nmap ]t <Plug>(ultest-next-fail)
+nmap [t <Plug>(ultest-prev-fail)
