@@ -24,6 +24,7 @@ inoremap <C-l> <Right>
 
 nnoremap <tab> gt
 nnoremap <C-q> <Esc>:BufferClose<Enter>
+nnoremap <C-Q> <Esc>:bufdo bwipeout<Enter>
 " nnoremap <C-q> <Esc><C-w>q
 
 " bd or q command
