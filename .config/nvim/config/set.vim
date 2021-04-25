@@ -87,3 +87,6 @@ set lazyredraw
 " set cursorline
 set synmaxcol=128
 syntax sync minlines=256
+
+" right vsplit
+set splitright
