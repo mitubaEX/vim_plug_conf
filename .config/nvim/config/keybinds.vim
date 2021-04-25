@@ -149,3 +149,6 @@ let g:EasyMotion_do_mapping = 0 " Disable default mappings
 map  <Leader>e <Plug>(easymotion-bd-w)
 nmap <Leader>e <Plug>(easymotion-overwin-w)
 " }}}
+
+" open terminal in vsplit
+nnoremap <Leader>= :vs +te<CR>
