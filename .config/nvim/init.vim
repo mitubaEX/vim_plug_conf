@@ -10,20 +10,6 @@ source $HOME/.config/nvim/config/fzf_functions.vim
 source $HOME/.config/nvim/config/plugin_config.vim
 source $HOME/.config/nvim/config/lsp_config.vim
 
-" treesitter
-" lua <<EOF
-" require'nvim-treesitter.configs'.setup {
-"   ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-"   highlight = {
-"     enable = true,              -- false will disable the whole extension
-"     disable = { "vue" },  -- list of language that will be disabled
-"   },
-"   indent = {
-"     enable = true, -- これを設定することでtree-sitterによるインデントを有効にできます
-"   },
-" }
-" EOF
-
 " polyglot(vim-markdown)
 let g:vim_markdown_conceal_code_blocks = 0
 
@@ -36,3 +22,16 @@ autocmd BufNewFile *_spec.rb 0r ~/.config/nvim/template/template_spec.rb
 
 " remove all trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
+
+" treesitter
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+  },
+  indent = {
+    enable = true
+  },
+}
+EOF
+
