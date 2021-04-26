@@ -103,5 +103,7 @@ Plug 'tweekmonster/startuptime.vim'
 
 Plug 'vuciv/vim-bujo'
 
+Plug 'jiangmiao/auto-pairs'
+
 " Initialize plugin system
 call plug#end()
