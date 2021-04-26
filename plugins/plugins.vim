@@ -34,7 +34,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tyru/columnskip.vim'
 
 Plug 'AndrewRadev/tagalong.vim'
-Plug 'cohama/lexima.vim'
 Plug 'alvan/vim-closetag'
 
 " test
@@ -101,10 +100,6 @@ Plug 'weirongxu/plantuml-previewer.vim'
 Plug 'easymotion/vim-easymotion'
 
 Plug 'tweekmonster/startuptime.vim'
-
-Plug 'tpope/vim-endwise'
-
-Plug 'tpope/vim-projectionist'
 
 Plug 'vuciv/vim-bujo'
 
