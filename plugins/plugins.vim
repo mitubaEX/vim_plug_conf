@@ -66,6 +66,7 @@ Plug 'Yggdroot/indentLine'
 
 " <Leader>r<word obj> replace word
 Plug 'kana/vim-operator-user'
+Plug 'kana/vim-operator-replace'
 
 Plug 'osyo-manga/vim-operator-stay-cursor'
 Plug 'wellle/targets.vim'

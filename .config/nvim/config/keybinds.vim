@@ -24,7 +24,7 @@ inoremap <C-l> <Right>
 
 nnoremap <tab> gt
 nnoremap <C-q> <Esc>:BufferClose<Enter>
-nnoremap <C-Q> <Esc>:bufdo bwipeout<Enter>
+" nnoremap <C-Q> <Esc>:bufdo bwipeout<Enter>
 " nnoremap <C-q> <Esc><C-w>q
 
 " bd or q command
@@ -160,3 +160,7 @@ nmap <Leader>q :Ultest<CR>
 nmap <Leader>Q :UltestNearest<CR>
 nmap ]t <Plug>(ultest-next-fail)
 nmap [t <Plug>(ultest-prev-fail)
+
+" operator-replace
+vmap p <Plug>(operator-replace)
+nmap <Leader>r <Plug>(operator-replace)
