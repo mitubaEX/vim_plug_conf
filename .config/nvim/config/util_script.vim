@@ -4,9 +4,17 @@ function! s:toggleRspecFile() abort
   let basename = @%
   let filename = expand('%:t')
   if current_dir =~ 'spec'
-    execute 'e ' . substitute(substitute(basename, filename, '', 'g'), 'spec', 'app', 'g') . substitute(filename, '_spec.rb', '', 'g') . '.rb'
+    if current_dir =~ 'requests'
+      execute 'e ' . substitute(substitute(substitute(basename, 'requests', 'controllers', 'g'), filename, '', 'g'), 'spec', 'app', 'g') . substitute(filename, '_spec.rb', '', 'g') . '.rb'
+    else
+      execute 'e ' . substitute(substitute(basename, filename, '', 'g'), 'spec', 'app', 'g') . substitute(filename, '_spec.rb', '', 'g') . '.rb'
+    endif
   else
-    execute 'e ' . substitute(substitute(basename, filename, '', 'g'), 'app', 'spec', 'g') . substitute(filename, '.rb', '', 'g') . '_spec.rb'
+    if current_dir =~ 'controllers'
+      execute 'e ' . substitute(substitute(substitute(basename, 'controllers', 'requests', 'g'), filename, '', 'g'), 'app', 'spec', 'g') . substitute(filename, '.rb', '', 'g') . '_spec.rb'
+    else
+      execute 'e ' . substitute(substitute(basename, filename, '', 'g'), 'app', 'spec', 'g') . substitute(filename, '.rb', '', 'g') . '_spec.rb'
+    endif
   endif
 endfunction
 command! -nargs=* ToggleRspecFile call s:toggleRspecFile()
