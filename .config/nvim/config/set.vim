@@ -36,7 +36,7 @@ scriptencoding utf-8
 set wrap
 set autoindent
 set ttyfast
-set number
+" set number
 set sm
 set ai
 set noswapfile
