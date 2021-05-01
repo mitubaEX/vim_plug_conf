@@ -43,7 +43,6 @@ Plug 'rcarriga/vim-ultest', { 'do': ':UpdateRemotePlugins' }
 " util
 Plug 'mitubaEX/jumpy.vim'
 Plug 'rhysd/clever-split.vim'
-Plug 'tyru/caw.vim'
 Plug 'matze/vim-move'
 Plug 'bkad/CamelCaseMotion'
 Plug 'brooth/far.vim'
@@ -106,6 +105,8 @@ Plug 'tweekmonster/startuptime.vim'
 Plug 'vuciv/vim-bujo'
 
 Plug 'jiangmiao/auto-pairs'
+
+Plug 'terrortylor/nvim-comment'
 
 " Initialize plugin system
 call plug#end()

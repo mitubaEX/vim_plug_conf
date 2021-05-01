@@ -1,8 +1,6 @@
 " reader ref:https://postd.cc/how-to-boost-your-vim-productivity/
 let maplocalleader = "\\"
 let mapleader = "\<Space>"
-nmap <LocalLeader>c <Plug>(caw:hatpos:toggle)
-vmap <LocalLeader>c <Plug>(caw:hatpos:toggle)
 
 nnoremap <Leader>w <Esc>:w<CR>
 nnoremap <Leader>o :CtrlP<CR>

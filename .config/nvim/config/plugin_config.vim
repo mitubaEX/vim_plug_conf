@@ -301,3 +301,7 @@ require('lualine').setup{
 }
 EOF
 " }}}
+
+lua << EOF
+require('nvim_comment').setup()
+EOF
