@@ -38,6 +38,7 @@ require'lspconfig'.solargraph.setup{}
 require'lspconfig'.flow.setup{}
 require'lspconfig'.yamlls.setup{}
 require'lspconfig'.rust_analyzer.setup{}
+require'lspconfig'.pyright.setup{}
 EOF
 
 " lspkind
@@ -129,11 +130,8 @@ require'compe'.setup {
 }
 EOF
 
-" NOTE: Order is important. You can't lazy loading lexima.vim.
-" let g:lexima_no_default_rules = v:true
-" call lexima#set_default_rules()
-" inoremap <silent><expr> <C-Space> compe#complete()
-" inoremap <silent><expr> <CR>      compe#confirm(lexima#expand('<LT>CR>', 'i'))
+inoremap <silent><expr> <C-Space> compe#complete()
+inoremap <silent><expr> <CR>      compe#confirm('<CR>')
 
 " vista {{{
 " How each level is indented and what to prepend.

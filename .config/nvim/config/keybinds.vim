@@ -1,8 +1,6 @@
 " reader ref:https://postd.cc/how-to-boost-your-vim-productivity/
 let maplocalleader = "\\"
 let mapleader = "\<Space>"
-nmap <LocalLeader>c <Plug>(caw:hatpos:toggle)
-vmap <LocalLeader>c <Plug>(caw:hatpos:toggle)
 
 nnoremap <Leader>w <Esc>:w<CR>
 nnoremap <Leader>o :CtrlP<CR>
@@ -24,6 +22,7 @@ inoremap <C-l> <Right>
 
 nnoremap <tab> gt
 nnoremap <C-q> <Esc>:BufferClose<Enter>
+" nnoremap <C-Q> <Esc>:bufdo bwipeout<Enter>
 " nnoremap <C-q> <Esc><C-w>q
 
 " bd or q command
@@ -106,8 +105,8 @@ nmap <Leader>C :!echo "%" \| pbcopy<CR>
 nnoremap <Leader>- :CleverSplit<CR>
 
 " vim-test
-nmap <Leader>q :TestFile<CR>
-nmap <Leader>Q :TestNearest<CR>
+" nmap <Leader>q :TestFile<CR>
+" nmap <Leader>Q :TestNearest<CR>
 
 " floaterm
 nmap <Leader>[ :FloatermToggle<CR>
@@ -149,3 +148,17 @@ let g:EasyMotion_do_mapping = 0 " Disable default mappings
 map  <Leader>e <Plug>(easymotion-bd-w)
 nmap <Leader>e <Plug>(easymotion-overwin-w)
 " }}}
+
+" open terminal in vsplit
+nnoremap <Leader>= :vs +te<CR>
+
+" move ultest popup window
+nmap <Leader>u <Plug>(ultest-output-jump)
+nmap <Leader>q :Ultest<CR>
+nmap <Leader>Q :UltestNearest<CR>
+nmap ]t <Plug>(ultest-next-fail)
+nmap [t <Plug>(ultest-prev-fail)
+
+" operator-replace
+vmap p <Plug>(operator-replace)
+nmap <Leader>r <Plug>(operator-replace)

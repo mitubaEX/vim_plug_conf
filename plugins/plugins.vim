@@ -34,16 +34,15 @@ Plug 'tpope/vim-repeat'
 Plug 'tyru/columnskip.vim'
 
 Plug 'AndrewRadev/tagalong.vim'
-Plug 'cohama/lexima.vim'
 Plug 'alvan/vim-closetag'
 
 " test
 Plug 'vim-test/vim-test'
+Plug 'rcarriga/vim-ultest', { 'do': ':UpdateRemotePlugins' }
 
 " util
 Plug 'mitubaEX/jumpy.vim'
 Plug 'rhysd/clever-split.vim'
-Plug 'tyru/caw.vim'
 Plug 'matze/vim-move'
 Plug 'bkad/CamelCaseMotion'
 Plug 'brooth/far.vim'
@@ -65,6 +64,7 @@ Plug 'Yggdroot/indentLine'
 
 " <Leader>r<word obj> replace word
 Plug 'kana/vim-operator-user'
+Plug 'kana/vim-operator-replace'
 
 Plug 'osyo-manga/vim-operator-stay-cursor'
 Plug 'wellle/targets.vim'
@@ -85,7 +85,9 @@ Plug 'hoob3rt/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
 
-" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+" nvim-treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+Plug 'romgrk/nvim-treesitter-context'
 
 " telescope.nvim
 Plug 'nvim-lua/popup.nvim'
@@ -100,7 +102,11 @@ Plug 'easymotion/vim-easymotion'
 
 Plug 'tweekmonster/startuptime.vim'
 
-Plug 'tpope/vim-endwise'
+Plug 'vuciv/vim-bujo'
+
+Plug 'jiangmiao/auto-pairs'
+
+Plug 'terrortylor/nvim-comment'
 
 " Initialize plugin system
 call plug#end()

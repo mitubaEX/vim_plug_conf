@@ -36,7 +36,7 @@ scriptencoding utf-8
 set wrap
 set autoindent
 set ttyfast
-set number
+" set number
 set sm
 set ai
 set noswapfile
@@ -87,3 +87,6 @@ set lazyredraw
 " set cursorline
 set synmaxcol=128
 syntax sync minlines=256
+
+" right vsplit
+set splitright
