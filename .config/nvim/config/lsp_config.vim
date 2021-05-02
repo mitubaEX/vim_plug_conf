@@ -37,6 +37,7 @@ require'lspconfig'.tsserver.setup{
 require'lspconfig'.solargraph.setup{}
 require'lspconfig'.flow.setup{}
 require'lspconfig'.yamlls.setup{}
+require'lspconfig'.rust_analyzer.setup{}
 require'lspconfig'.pyright.setup{}
 EOF
 
@@ -84,6 +85,8 @@ nnoremap <silent>K :Lspsaga hover_doc<CR>
 nnoremap <silent>gr :Lspsaga rename<CR>
 
 nnoremap <silent> ge :Lspsaga diagnostic_jump_next<CR>
+
+nnoremap <silent>gc <cmd>lua require'lspsaga.diagnostic'.show_line_diagnostics()<CR>
 
 " vsnip
 " Expand
