@@ -49,9 +49,6 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 nnoremap [vim-fugitive] <Nop>
 nmap <C-g> [vim-fugitive]
 
-" diff
-nnoremap <silent> [vim-fugitive]d  :<C-u>Gdiff<CR>
-
 " blame
 nnoremap <silent> [vim-fugitive]b  :<C-u>Git blame<CR>
 
@@ -78,6 +75,10 @@ function! s:gLogCurrentFile() abort
 endfunction
 command! -nargs=* GLogCurrentFile call s:gLogCurrentFile()
 nnoremap <C-g>l  :<C-u>GLogCurrentFile<CR>
+
+""" diff(diffview.nvim)
+nnoremap <C-g>d  :DiffviewOpen<CR>
+nnoremap <C-g>D  :DiffviewClose<CR>
 " }}}
 
 " copy 0 register

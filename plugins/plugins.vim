@@ -108,5 +108,7 @@ Plug 'jiangmiao/auto-pairs'
 
 Plug 'terrortylor/nvim-comment'
 
+Plug 'sindrets/diffview.nvim'
+
 " Initialize plugin system
 call plug#end()
