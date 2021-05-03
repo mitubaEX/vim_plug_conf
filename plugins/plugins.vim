@@ -110,5 +110,7 @@ Plug 'terrortylor/nvim-comment'
 
 Plug 'sindrets/diffview.nvim'
 
+Plug 'glidenote/memolist.vim'
+
 " Initialize plugin system
 call plug#end()

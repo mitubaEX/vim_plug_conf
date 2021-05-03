@@ -305,3 +305,6 @@ EOF
 lua << EOF
 require('nvim_comment').setup()
 EOF
+
+" memolist
+let g:memolist_path = "~/.memolist"
