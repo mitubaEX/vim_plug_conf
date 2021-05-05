@@ -308,3 +308,10 @@ EOF
 
 " memolist
 let g:memolist_path = "~/.memolist"
+
+" folke/lsp-trouble.nvim {{{
+lua << EOF
+require("trouble").setup {}
+EOF
+nnoremap <leader>xx <cmd>LspTroubleToggle<cr>
+" }}}

@@ -112,5 +112,7 @@ Plug 'sindrets/diffview.nvim'
 
 Plug 'glidenote/memolist.vim'
 
+Plug 'folke/lsp-trouble.nvim'
+
 " Initialize plugin system
 call plug#end()
