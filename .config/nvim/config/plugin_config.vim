@@ -315,3 +315,10 @@ require("trouble").setup {}
 EOF
 nnoremap <leader>xx <cmd>LspTroubleToggle<cr>
 " }}}
+
+" lewis6991/gitsigns.nvim
+lua << EOF
+require('gitsigns').setup {
+  current_line_blame = true,
+}
+EOF
