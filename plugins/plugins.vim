@@ -19,6 +19,7 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-fugitive'
 Plug 'lambdalisue/gina.vim'
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'mitubaEX/blame_open.nvim'
 
 Plug 'rhysd/clever-f.vim'
 Plug 'kana/vim-operator-user'
