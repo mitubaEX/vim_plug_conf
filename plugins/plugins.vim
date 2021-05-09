@@ -18,7 +18,6 @@ Plug 'rhysd/accelerated-jk'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-fugitive'
 Plug 'lambdalisue/gina.vim'
-Plug 'airblade/vim-gitgutter'
 Plug 'lewis6991/gitsigns.nvim'
 
 Plug 'rhysd/clever-f.vim'
