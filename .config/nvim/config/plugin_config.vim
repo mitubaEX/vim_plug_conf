@@ -318,3 +318,6 @@ require('gitsigns').setup {
   current_line_blame = true,
 }
 EOF
+
+" mitubaEX/blame_open.nvim
+let g:blame_open_upstream_remote = 1
