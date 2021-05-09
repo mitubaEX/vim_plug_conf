@@ -102,9 +102,6 @@ nmap <Leader>c :!echo "%:t" \| pbcopy<CR>
 nmap <Leader>C :!echo "%" \| pbcopy<CR>
 " }}}
 
-" clever split
-nnoremap <Leader>- :CleverSplit<CR>
-
 " vim-test
 " nmap <Leader>q :TestFile<CR>
 " nmap <Leader>Q :TestNearest<CR>

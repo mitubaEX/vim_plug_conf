@@ -9,10 +9,6 @@ let g:floaterm_height=0.8
 nmap j <Plug>(accelerated_jk_gj)
 nmap k <Plug>(accelerated_jk_gk)
 
-" rhysd/vim-operator-surround
-" saiw(: aaa -> (aaa)
-map <silent>sa <Plug>(operator-surround-append)
-
 " CamelCaseMotion
 map <silent> w <Plug>CamelCaseMotion_w
 map <silent> b <Plug>CamelCaseMotion_b

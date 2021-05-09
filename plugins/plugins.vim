@@ -21,10 +21,10 @@ Plug 'lambdalisue/gina.vim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'mitubaEX/blame_open.nvim'
 
+" f motion
 Plug 'rhysd/clever-f.vim'
-Plug 'kana/vim-operator-user'
-Plug 'rhysd/vim-operator-surround'
 
+" add: ysiw(
 " add: ysiw(
 " replace: cs(]
 " delete: ds(
@@ -34,6 +34,7 @@ Plug 'tpope/vim-repeat'
 " https://tyru.hatenablog.com/entry/2020/04/26/110000
 Plug 'tyru/columnskip.vim'
 
+" html
 Plug 'AndrewRadev/tagalong.vim'
 Plug 'alvan/vim-closetag'
 
@@ -41,20 +42,19 @@ Plug 'alvan/vim-closetag'
 Plug 'vim-test/vim-test'
 Plug 'rcarriga/vim-ultest', { 'do': ':UpdateRemotePlugins' }
 
-" util
+" fast move
 Plug 'mitubaEX/jumpy.vim'
-Plug 'rhysd/clever-split.vim'
 Plug 'matze/vim-move'
-Plug 'bkad/CamelCaseMotion'
+Plug 'mg979/vim-visual-multi'
+Plug 'pechorin/any-jump.vim'
+
+" util
 Plug 'brooth/far.vim'
-Plug 'deris/vim-rengbang'
 Plug 'tyru/open-browser.vim'
 Plug 'AndrewRadev/linediff.vim'
-Plug 'pechorin/any-jump.vim'
 Plug 't9md/vim-quickhl'
 Plug 'mhinz/vim-startify'
 Plug 'yuttie/comfortable-motion.vim'
-Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-speeddating'
 Plug 'itchyny/vim-cursorword'
 Plug 'machakann/vim-highlightedyank'
@@ -67,9 +67,14 @@ Plug 'Yggdroot/indentLine'
 Plug 'kana/vim-operator-user'
 Plug 'kana/vim-operator-replace'
 
+" yank motion
 Plug 'osyo-manga/vim-operator-stay-cursor'
-Plug 'wellle/targets.vim'
 
+" add text obj
+Plug 'wellle/targets.vim'
+Plug 'bkad/CamelCaseMotion'
+
+" wilder
 Plug 'gelguy/wilder.nvim'
 
 " fern
@@ -78,6 +83,7 @@ Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 Plug 'lambdalisue/nerdfont.vim'
 
+" fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
