@@ -321,3 +321,5 @@ EOF
 
 " mitubaEX/blame_open.nvim
 let g:blame_open_upstream_remote = 1
+
+unlet g:csv_highlight_column
