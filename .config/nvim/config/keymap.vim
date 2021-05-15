@@ -155,3 +155,6 @@ nmap [t <Plug>(ultest-prev-fail)
 " operator-replace
 vmap p <Plug>(operator-replace)
 nmap <Leader>r <Plug>(operator-replace)
+
+" mitubaEX/toggle_rspec_file.nvim
+nmap <Leader>x :ToggleRspecFile<CR>
