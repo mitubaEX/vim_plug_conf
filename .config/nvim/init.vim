@@ -2,7 +2,7 @@
 source $HOME/plugins/plugins.vim
 
 " nvim config
-source $HOME/.config/nvim/config/keybinds.vim
+source $HOME/.config/nvim/config/keymap.vim
 source $HOME/.config/nvim/config/set.vim
 source $HOME/.config/nvim/config/color.vim
 source $HOME/.config/nvim/config/util_script.vim

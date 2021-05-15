@@ -18,3 +18,6 @@ Plug 'leafgarland/typescript-vim', { 'for': ['javascript', 'javascriptreact', 't
 Plug 'maxmellon/vim-jsx-pretty', { 'for': ['javascript', 'javascriptreact', 'typescript', 'typescriptreact'] }
 
 Plug 'liuchengxu/vista.vim'
+
+Plug 'folke/lsp-trouble.nvim'
+

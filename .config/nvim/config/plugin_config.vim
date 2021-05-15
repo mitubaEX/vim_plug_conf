@@ -162,6 +162,7 @@ let g:fern#renderer = "nerdfont"
 " chrisbra/csv
 let g:csv_delim=','
 let g:csv_highlight_column = 'y'
+unlet g:csv_highlight_column
 let g:csv_hiGroup = 'Visual'
 
 " matze/vim-move
@@ -321,5 +322,3 @@ EOF
 
 " mitubaEX/blame_open.nvim
 let g:blame_open_upstream_remote = 1
-
-unlet g:csv_highlight_column

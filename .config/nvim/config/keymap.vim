@@ -142,6 +142,7 @@ nmap <Leader>e <Plug>(easymotion-overwin-w)
 " }}}
 
 " open terminal in vsplit
+nnoremap <Leader>- :vs<CR>
 nnoremap <Leader>= :vs +te<CR>
 
 " move ultest popup window
