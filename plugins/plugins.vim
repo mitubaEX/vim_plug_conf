@@ -116,5 +116,7 @@ Plug 'sindrets/diffview.nvim'
 
 Plug 'glidenote/memolist.vim'
 
+Plug 'mitubaEX/toggle_rspec_file.nvim'
+
 " Initialize plugin system
 call plug#end()
