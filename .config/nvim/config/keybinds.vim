@@ -46,18 +46,6 @@ tnoremap <silent> <ESC> <C-\><C-n>
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 " git config {{{
-nnoremap [vim-fugitive] <Nop>
-nmap <C-g> [vim-fugitive]
-
-" blame
-nnoremap <silent> [vim-fugitive]b  :<C-u>Git blame<CR>
-
-" add
-nnoremap <silent> [vim-fugitive]a  :<C-u>Gwrite<CR>
-
-" browse
-nnoremap <silent> [vim-fugitive]o  :<C-u>GBrowse<CR>
-
 """ Gina
 " grep
 nnoremap <C-g>g  :<C-u>Gina grep<CR>
@@ -67,6 +55,12 @@ nnoremap <C-g>c  :<C-u>Gina commit -v<CR>
 
 " status
 nnoremap <C-g>s  :<C-u>Gina status<CR>
+
+" blame
+nnoremap <C-g>b  :<C-u>Gina blame<CR>
+
+" browse
+nnoremap <C-g>o  :<C-u>Gina browse :%<CR>
 
 " log
 function! s:gLogCurrentFile() abort

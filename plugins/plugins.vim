@@ -15,8 +15,6 @@ Plug 'voldikss/vim-floaterm'
 Plug 'rhysd/accelerated-jk'
 
 " git
-Plug 'tpope/vim-rhubarb'
-Plug 'tpope/vim-fugitive'
 Plug 'lambdalisue/gina.vim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'mitubaEX/blame_open.nvim'
@@ -24,7 +22,6 @@ Plug 'mitubaEX/blame_open.nvim'
 " f motion
 Plug 'rhysd/clever-f.vim'
 
-" add: ysiw(
 " add: ysiw(
 " replace: cs(]
 " delete: ds(
