@@ -11,17 +11,9 @@ nmap k <Plug>(accelerated_jk_gk)
 
 " CamelCaseMotion
 map <silent> w <Plug>CamelCaseMotion_w
-map <silent> b <Plug>CamelCaseMotion_b
 map <silent> e <Plug>CamelCaseMotion_e
-map <silent> ge <Plug>CamelCaseMotion_ge
-sunmap w
-sunmap b
-sunmap e
-sunmap ge
 omap <silent> iw <Plug>CamelCaseMotion_iw
 xmap <silent> iw <Plug>CamelCaseMotion_iw
-omap <silent> ib <Plug>CamelCaseMotion_ib
-xmap <silent> ib <Plug>CamelCaseMotion_ib
 omap <silent> ie <Plug>CamelCaseMotion_ie
 xmap <silent> ie <Plug>CamelCaseMotion_ie
 
@@ -75,9 +67,6 @@ let g:any_jump_results_ui_style = 'filename_first'
 let g:any_jump_window_width_ratio  = 0.6
 let g:any_jump_window_height_ratio = 0.6
 let g:any_jump_window_top_offset   = 4
-
-" Customize any-jump colors with extending default color scheme:
-" let g:any_jump_colors = { "help": "Comment" }
 
 " Or override all default colors
 let g:any_jump_colors = {
@@ -140,7 +129,7 @@ let g:comfortable_motion_air_drag = 4.0
 
 " osyo-manga/vim-operator-stay-cursor
 " yank時カーソル移動しないやつ
-map <expr> y operator#stay_cursor#wrapper("y")
+" map <expr> y operator#stay_cursor#wrapper("y")
 
 " gelguy/wilder.nvim {{
 call wilder#enable_cmdline_enter()
