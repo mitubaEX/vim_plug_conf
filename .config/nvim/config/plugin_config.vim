@@ -322,3 +322,8 @@ EOF
 
 " mitubaEX/blame_open.nvim
 let g:blame_open_upstream_remote = 1
+
+" nacro90/numb.nvim
+lua << EOF
+require('numb').setup()
+EOF

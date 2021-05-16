@@ -118,5 +118,7 @@ Plug 'glidenote/memolist.vim'
 
 Plug 'mitubaEX/toggle_rspec_file.nvim'
 
+Plug 'nacro90/numb.nvim'
+
 " Initialize plugin system
 call plug#end()
