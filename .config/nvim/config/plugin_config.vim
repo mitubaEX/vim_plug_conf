@@ -327,3 +327,8 @@ let g:blame_open_upstream_remote = 1
 lua << EOF
 require('numb').setup()
 EOF
+
+" pwntester/octo.nvim
+lua << EOF
+require("octo").setup()
+EOF
