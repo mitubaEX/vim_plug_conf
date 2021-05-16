@@ -2,8 +2,8 @@
 let maplocalleader = "\\"
 let mapleader = "\<Space>"
 
-nnoremap <Leader>w <Esc>:w<CR>
-nnoremap <Leader>o :CtrlP<CR>
+nnoremap <silent> <Leader>w <Esc>:w<CR>
+nnoremap <silent> <Leader>o :CtrlP<CR>
 
 noremap <Up> <Nop>
 noremap <Down> <Nop>

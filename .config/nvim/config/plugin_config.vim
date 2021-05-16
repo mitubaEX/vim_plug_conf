@@ -243,13 +243,15 @@ let b:coc_suggest_disable = 1
 lua << EOF
 require('lualine').setup{
   options = {
-    theme = 'gruvbox',
+    theme = 'gruvbox_material',
     icons_enabled = true,
   },
   sections = {
     lualine_a = { {'mode', upper = true} },
     lualine_b = { {'branch', icon = ''} },
-    lualine_c = { {'filename', file_status = true}, {
+    lualine_c = {
+      {'filename', file_status = true, path = 1, separator = ''},
+      { 'diff', separator = '', icon = '✏️ :' }, {
       -- Lsp server name .
       -- ref: https://gist.github.com/shadmansaleh/cd526bc166237a5cbd51429cc1f6291b
       function ()
@@ -265,8 +267,10 @@ require('lualine').setup{
         end
         return msg
       end,
-      icon = ' LSP:'
-    }, {'diagnostics', sources = {'nvim_lsp'}}, {
+      icon = '⚙️ :',
+      color = {fg = '#a69ded'},
+      separator = ''
+    }, {'diagnostics', sources = {'nvim_lsp'}, icon = '🚦:'}, {
       function ()
         return vim.b.vista_nearest_method_or_function
       end,
@@ -319,5 +323,5 @@ EOF
 
 " pwntester/octo.nvim
 lua << EOF
-require("octo").setup()
+-- require("octo").setup()
 EOF
