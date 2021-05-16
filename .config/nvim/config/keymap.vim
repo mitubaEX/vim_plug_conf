@@ -21,19 +21,7 @@ inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 
 nnoremap <tab> gt
-nnoremap <C-q> <Esc>:BufferClose<Enter>
-" nnoremap <C-Q> <Esc>:bufdo bwipeout<Enter>
-" nnoremap <C-q> <Esc><C-w>q
-
-" bd or q command
-function! s:bufferClose() abort
-  if len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
-    execute "q"
-  else
-    execute "bd"
-  endif
-endfunction
-command! -nargs=* BufferClose call s:bufferClose()
+nnoremap <C-q> :Bdelete this<CR>
 
 " escape
 inoremap <silent> jj <ESC>

@@ -57,6 +57,7 @@ Plug 'tpope/vim-speeddating'
 Plug 'itchyny/vim-cursorword'
 Plug 'machakann/vim-highlightedyank'
 Plug 'edkolev/tmuxline.vim'
+Plug 'Asheq/close-buffers.vim'
 
 " indent
 Plug 'Yggdroot/indentLine'
