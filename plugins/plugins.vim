@@ -61,6 +61,7 @@ Plug 'Asheq/close-buffers.vim'
 
 " indent
 Plug 'Yggdroot/indentLine'
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 " <Leader>r<word obj> replace word
 Plug 'kana/vim-operator-user'

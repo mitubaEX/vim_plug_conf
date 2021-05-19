@@ -243,7 +243,7 @@ let b:coc_suggest_disable = 1
 lua << EOF
 require('lualine').setup{
   options = {
-    theme = 'gruvbox_material',
+    theme = 'onedark',
     icons_enabled = true,
   },
   sections = {

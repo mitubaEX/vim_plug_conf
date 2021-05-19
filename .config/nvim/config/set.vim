@@ -90,3 +90,6 @@ syntax sync minlines=256
 
 " right vsplit
 set splitright
+
+" spell enabled
+set spell
