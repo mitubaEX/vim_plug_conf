@@ -14,3 +14,7 @@ find plugins -type f | xargs -I% ln -sf $(pwd)/% $HOME/%
 # nvim config
 mkdir -p $HOME/.config/nvim/config
 find .config -type f | xargs -I% ln -sf $(pwd)/% $HOME/%
+
+# vsnip
+mkdir -p $HOME/.vsnip
+find .vsnip -type f | xargs -I% ln -sf $(pwd)/% $HOME/%
