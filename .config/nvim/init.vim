@@ -17,6 +17,9 @@ let g:vim_markdown_conceal = 0
 autocmd bufnewfile,bufread *.tsx set filetype=typescriptreact
 autocmd bufnewfile,bufread *.jsx set filetype=javascriptreact
 
+" rspec filetype
+autocmd bufnewfile,bufread *_spec.rb set filetype=rspec
+
 " open spec template
 autocmd BufNewFile *_spec.rb 0r ~/.config/nvim/template/template_spec.rb
 
@@ -25,12 +28,12 @@ autocmd BufWritePre * %s/\s\+$//e
 
 " treesitter
 lua <<EOF
--- require'nvim-treesitter.configs'.setup {
---   highlight = {
---     enable = true,
---   },
---   indent = {
---     enable = false
---   },
--- }
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+  },
+  indent = {
+    enable = false
+  },
+}
 EOF
