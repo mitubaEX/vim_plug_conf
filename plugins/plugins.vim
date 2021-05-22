@@ -19,6 +19,7 @@ Plug 'lambdalisue/gina.vim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'mitubaEX/blame_open.nvim'
 Plug 'pwntester/octo.nvim'
+Plug 'tpope/vim-fugitive'
 
 " f motion
 Plug 'rhysd/clever-f.vim'
