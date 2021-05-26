@@ -44,7 +44,19 @@ lua << EOF
 require'lspconfig'.tsserver.setup{
   -- filetypes = {'typescript', 'typescript.tsx', 'typescriptreact'}
 }
-require'lspconfig'.solargraph.setup{}
+require'lspconfig'.solargraph.setup{
+  filetypes = {"ruby", "rakefile", "rspec"},
+  settings = {
+      solargraph = {
+          completion = true,
+          diagnostic = true,
+          folding = true,
+          references = true,
+          rename = true,
+          symbols = true
+      }
+  }
+}
 require'lspconfig'.flow.setup{}
 require'lspconfig'.yamlls.setup{}
 require'lspconfig'.rust_analyzer.setup{}
