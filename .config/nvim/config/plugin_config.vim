@@ -38,6 +38,7 @@ let test#ruby#rspec#options = {
   \ 'file':    '--format documentation',
   \ 'suite':   '--tag ~slow',
 \}
+let test#strategy = 'neovim'
 
 " pechorin/any-jump.vim {{{
 " Show line numbers in search rusults

@@ -20,6 +20,7 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'mitubaEX/blame_open.nvim'
 Plug 'pwntester/octo.nvim'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 
 " f motion
 Plug 'rhysd/clever-f.vim'
