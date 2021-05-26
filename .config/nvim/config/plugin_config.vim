@@ -158,17 +158,6 @@ let g:csv_hiGroup = 'Visual'
 " matze/vim-move
 let g:move_key_modifier = 'C'
 
-" coc {{{
-let g:coc_global_extensions = [
-  \ 'coc-eslint',
-  \ 'coc-prettier',
-  \ ]
-
-" coc-prettier
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
-let b:coc_suggest_disable = 1
-" }}}
-
 " telescope
 " Find files using Telescope command-line sugar.
 " nnoremap <leader>ff <cmd>Telescope find_files<cr>

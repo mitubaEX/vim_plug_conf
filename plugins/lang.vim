@@ -1,6 +1,3 @@
-" coc
-Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['javascript', 'javascriptreact', 'typescript', 'typescriptreact']}
-
 Plug 'sheerun/vim-polyglot'
 
 Plug 'neovim/nvim-lspconfig'
