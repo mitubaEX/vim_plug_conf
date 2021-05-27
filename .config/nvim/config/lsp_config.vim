@@ -25,6 +25,10 @@
 " > FormulaUnavailableError: No available formula with the name "/usr/local/opt/avr-gcc@7/.brew/avr-gcc@7.rb".
 " $ brew install avr-gcc@7
 
+" diagnostic
+" ref: https://qiita.com/hrsh7th@github/items/7b9670adf3d8328fe2d8
+" $ brew install efm-langserver
+
 " LSP config (the mappings used in the default file don't quite work right)
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
@@ -33,16 +37,17 @@ nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
 nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
 
-" autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync(nil, 100)
-" autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync(nil, 100)
-" autocmd BufWritePre *.ts lua vim.lsp.buf.formatting_sync(nil, 100)
-" autocmd BufWritePre *.tsx lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.ts lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.tsx lua vim.lsp.buf.formatting_sync(nil, 100)
 " autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
 
 " nvim-lspconfig
 lua << EOF
 require'lspconfig'.tsserver.setup{
   -- filetypes = {'typescript', 'typescript.tsx', 'typescriptreact'}
+  settings = {documentFormatting = false}
 }
 require'lspconfig'.solargraph.setup{
   filetypes = {"ruby", "rakefile", "rspec"},
@@ -61,6 +66,37 @@ require'lspconfig'.flow.setup{}
 require'lspconfig'.yamlls.setup{}
 require'lspconfig'.rust_analyzer.setup{}
 require'lspconfig'.pyright.setup{}
+
+-- efm
+local eslint = {
+  lintCommand = "./node_modules/.bin/eslint --stdin --stdin-filename ${INPUT}",
+  lintIgnoreExitCode = true,
+  lintStdin = true,
+  lintFormats = {"%f:%l:%c: %m"},
+  formatCommand = "./node_modules/.bin/eslint --fix ${INPUT}",
+  formatStdin = true
+}
+require "lspconfig".efm.setup {
+    init_options = {documentFormatting = true, codeAction = false},
+    filetypes = {"javascriptreact", "javascript", "typescript","typescriptreact"},
+    settings = {
+        rootMarkers = {".git/"},
+        languages = {
+            javascriptreact = {
+                eslint
+            },
+            javascriptreact = {
+                eslint
+            },
+            typescript = {
+                eslint
+            },
+            typescriptreact = {
+                eslint
+            },
+        }
+    }
+}
 
 -- lua
 local system_name
