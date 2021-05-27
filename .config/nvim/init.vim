@@ -28,12 +28,12 @@ autocmd BufWritePre * %s/\s\+$//e
 
 " treesitter
 lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  highlight = {
-    enable = true,
-  },
-  indent = {
-    enable = false
-  },
-}
+-- require'nvim-treesitter.configs'.setup {
+--   highlight = {
+--     enable = true,
+--   },
+--   indent = {
+--     enable = false
+--   },
+-- }
 EOF
