@@ -106,11 +106,16 @@ xmap <Leader>k <Plug>(columnskip:nonblank:prev)
 nnoremap <C-p> <C-i>
 
 " fzf
-nmap <Leader>t :call fzf#run(fzf#wrap('files', {'source': 'rg --files --hidden --glob "!.git/*"'}))<CR>
-nmap <Leader>T :GFiles<CR>
-nmap ; :Buffers<CR>
-let g:fzf_history_dir = '~/.local/share/fzf-history'
-let g:fzf_tags_command = 'ctags -R --exclude=.git --exclude=node_modules --exclude=test --exclude=spec --exclude=vendor'
+" nmap <Leader>t :call fzf#run(fzf#wrap('files', {'source': 'rg --files --hidden --glob "!.git/*"'}))<CR>
+" nmap <Leader>T :GFiles<CR>
+" nmap ; :Buffers<CR>
+" let g:fzf_history_dir = '~/.local/share/fzf-history'
+" let g:fzf_tags_command = 'ctags -R --exclude=.git --exclude=node_modules --exclude=test --exclude=spec --exclude=vendor'
+
+" telescope
+nmap <Leader>t :Telescope git_files<CR>
+nmap ; :Telescope buffers<CR>
+
 
 " any junmp {{{
 " Normal mode: Jump to definition under cursore
