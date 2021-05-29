@@ -269,3 +269,6 @@ EOF
 lua << EOF
 -- require("octo").setup()
 EOF
+
+" vim-ruby
+let ruby_no_expensive = 1
