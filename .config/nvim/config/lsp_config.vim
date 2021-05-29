@@ -4,6 +4,14 @@
 " $ solargraph download-core
 " $ solargraph bundle
 " $ solargraph config
+"
+" install rubocop
+" NOTE: Please asdf disable.
+" $ sudo gem install -v <version> rubocop
+" # optional
+" $ sudo gem install -v <version> rubocop-performance
+" $ sudo gem install -v <version> rubocop-rspec
+" $ sudo gem install -v <version> rubocop-rails
 
 " typescript
 " install commands
