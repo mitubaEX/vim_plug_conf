@@ -82,7 +82,7 @@ set undodir=$HOME/.vim/undodir
 " set showtabline=2
 
 " for 4k monitor
-set lazyredraw
+" set lazyredraw
 
 " set cursorline
 set synmaxcol=128

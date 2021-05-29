@@ -52,6 +52,7 @@ require'lspconfig'.tsserver.setup{
   settings = {documentFormatting = false}
 }
 require'lspconfig'.solargraph.setup{
+  init_options = {codeAction = false},
   filetypes = {"ruby", "rakefile", "rspec"},
   settings = {
       solargraph = {
@@ -84,7 +85,7 @@ require "lspconfig".efm.setup {
     settings = {
         rootMarkers = {".git/"},
         languages = {
-            javascriptreact = {
+            javascript = {
                 eslint
             },
             javascriptreact = {
