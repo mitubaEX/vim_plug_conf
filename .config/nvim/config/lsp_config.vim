@@ -47,10 +47,10 @@ nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
 
 " execute all formatCommand
 " ref: https://github.com/neovim/neovim/pull/14462
-" autocmd BufWritePre *.js lua vim.lsp.buf.formatting_seq_sync(nil, 100, nil)
-" autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_seq_sync(nil, 100, nil)
-" autocmd BufWritePre *.ts lua vim.lsp.buf.formatting_seq_sync(nil, 100, nil)
-" autocmd BufWritePre *.tsx lua vim.lsp.buf.formatting_seq_sync(nil, 100, nil)
+autocmd BufWritePre *.js lua vim.lsp.buf.formatting_seq_sync(nil, 100, nil)
+autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_seq_sync(nil, 100, nil)
+autocmd BufWritePre *.ts lua vim.lsp.buf.formatting_seq_sync(nil, 100, nil)
+autocmd BufWritePre *.tsx lua vim.lsp.buf.formatting_seq_sync(nil, 100, nil)
 " autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
 
 " nvim-lspconfig
@@ -80,11 +80,11 @@ require'lspconfig'.pyright.setup{}
 
 -- efm
 local eslint = {
-  lintCommand = "./node_modules/.bin/eslint --stdin --stdin-filename ${INPUT}",
+  lintCommand = "eslint_d -f unix --stdin --stdin-filename ${INPUT}",
   lintIgnoreExitCode = true,
   lintStdin = true,
   lintFormats = {"%f:%l:%c: %m"},
-  formatCommand = "./node_modules/.bin/eslint --fix ${INPUT}",
+  formatCommand = "eslint_d --fix ${INPUT}",
   formatStdin = true
 }
 require "lspconfig".efm.setup {

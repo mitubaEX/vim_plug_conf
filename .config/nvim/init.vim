@@ -26,6 +26,10 @@ autocmd BufNewFile *_spec.rb 0r ~/.config/nvim/template/template_spec.rb
 " remove all trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
+" reload tsx file
+" NOTE: When update eslint, this option become unnecessary.
+autocmd BufWritePre *.tsx e %
+
 " treesitter
 lua <<EOF
 -- require'nvim-treesitter.configs'.setup {
