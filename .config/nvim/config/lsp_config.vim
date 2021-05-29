@@ -51,6 +51,7 @@ autocmd BufWritePre *.js lua vim.lsp.buf.formatting_seq_sync(nil, 100, nil)
 autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_seq_sync(nil, 100, nil)
 autocmd BufWritePre *.ts lua vim.lsp.buf.formatting_seq_sync(nil, 100, nil)
 autocmd BufWritePre *.tsx lua vim.lsp.buf.formatting_seq_sync(nil, 100, nil)
+autocmd BufWritePre *.rb lua vim.lsp.buf.formatting_seq_sync(nil, 100, nil)
 " autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
 
 " nvim-lspconfig
@@ -87,26 +88,38 @@ local eslint = {
   formatCommand = "eslint_d --fix ${INPUT}",
   formatStdin = true
 }
+
+local rubocop = {
+  formatCommand = "rubocop -a ${INPUT}",
+  formatStdin = true
+}
+
 require "lspconfig".efm.setup {
-    init_options = {documentFormatting = true, codeAction = false},
-    filetypes = {"javascriptreact", "javascript", "typescript","typescriptreact"},
-    settings = {
-        rootMarkers = {".git/"},
-        languages = {
-            javascript = {
-                eslint
-            },
-            javascriptreact = {
-                eslint
-            },
-            typescript = {
-                eslint
-            },
-            typescriptreact = {
-                eslint
-            },
-        }
+  init_options = {documentFormatting = true, codeAction = false},
+  filetypes = {"javascriptreact", "javascript", "typescript", "typescriptreact", "ruby", "rspec"},
+  settings = {
+    rootMarkers = {".git/"},
+    languages = {
+      javascript = {
+        eslint
+      },
+      javascriptreact = {
+        eslint
+      },
+      typescript = {
+        eslint
+      },
+      typescriptreact = {
+        eslint
+      },
+      ruby = {
+        rubocop
+      },
+      rspec = {
+        rubocop
+      }
     }
+  }
 }
 
 -- lua
