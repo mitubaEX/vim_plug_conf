@@ -18,3 +18,7 @@ find .config -type f | xargs -I% ln -sf $(pwd)/% $HOME/%
 # vsnip
 mkdir -p $HOME/.vsnip
 find .vsnip -type f | xargs -I% ln -sf $(pwd)/% $HOME/%
+
+# efm-langserver
+mkdir -p $HOME/.config/efm-langserver
+ln -sf $(pwd)/.config/efm-langserver/config.yaml $HOME/.config/efm-langserver/config.yaml
