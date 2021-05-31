@@ -167,6 +167,9 @@ lua << EOF
 local actions = require('telescope.actions')
 require('telescope').setup{
 defaults = {
+  -- please install fzy
+  file_sorter = require'telescope.sorters'.get_fzy_sorter,
+  generic_sorter = require'telescope.sorters'.get_fzy_sorter,
   mappings = {
     i = {
       ["<c-p>"] = actions.preview_scrolling_up,
