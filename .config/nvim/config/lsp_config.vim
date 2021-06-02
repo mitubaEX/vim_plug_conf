@@ -66,7 +66,7 @@ require'lspconfig'.solargraph.setup{
   settings = {
       solargraph = {
           completion = true,
-          diagnostic = true,
+          diagnostic = false,
           folding = true,
           references = true,
           rename = true,

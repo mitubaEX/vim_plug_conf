@@ -1,4 +1,4 @@
 set termguicolors
 syntax enable
 
-colorscheme gruvbox
+colorscheme onedark
