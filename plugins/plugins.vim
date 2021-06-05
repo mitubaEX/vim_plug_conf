@@ -125,5 +125,7 @@ Plug 'mitubaEX/toggle_rspec_file.nvim'
 
 Plug 'nacro90/numb.nvim'
 
+Plug 'folke/lua-dev.nvim'
+
 " Initialize plugin system
 call plug#end()
