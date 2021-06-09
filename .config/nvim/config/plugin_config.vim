@@ -272,7 +272,7 @@ let g:blame_open_upstream_remote = 1
 
 " nacro90/numb.nvim
 lua << EOF
-require('numb').setup()
+-- require('numb').setup()
 EOF
 
 " pwntester/octo.nvim

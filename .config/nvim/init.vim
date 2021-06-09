@@ -28,7 +28,7 @@ autocmd BufWritePre * %s/\s\+$//e
 
 " reload tsx file
 " NOTE: When update eslint, this option become unnecessary.
-autocmd BufWritePre *.tsx e %
+" autocmd BufWritePre *.tsx e %
 
 " treesitter
 lua <<EOF
