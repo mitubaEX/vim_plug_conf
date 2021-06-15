@@ -127,7 +127,9 @@ Plug 'mitubaEX/toggle_rspec_file.nvim'
 
 Plug 'folke/lua-dev.nvim'
 
-Plug 'camspiers/snap'
+" Plug 'camspiers/snap'
+
+Plug 'ful1e5/onedark.nvim'
 
 " Initialize plugin system
 call plug#end()
