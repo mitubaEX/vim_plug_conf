@@ -47,12 +47,14 @@ nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
 
 " execute all formatCommand
 " ref: https://github.com/neovim/neovim/pull/14462
-autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync(nil, 100)
-autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync(nil, 100)
-autocmd BufWritePre *.ts lua vim.lsp.buf.formatting_sync(nil, 100)
-autocmd BufWritePre *.tsx lua vim.lsp.buf.formatting_sync(nil, 100)
-autocmd BufWritePre *.rb lua vim.lsp.buf.formatting_sync(nil, 100)
+" autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync(nil, 100)
+" autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync(nil, 100)
+" autocmd BufWritePre *.ts lua vim.lsp.buf.formatting_sync(nil, 100)
+" autocmd BufWritePre *.tsx lua vim.lsp.buf.formatting_sync(nil, 100)
+" autocmd BufWritePre *.rb lua vim.lsp.buf.formatting_sync(nil, 100)
 " autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
+
+nnoremap <Leader>W :lua vim.lsp.buf.formatting_sync(nil, 100)<CR>
 
 " nvim-lspconfig
 lua << EOF

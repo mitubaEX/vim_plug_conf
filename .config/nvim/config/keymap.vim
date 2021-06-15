@@ -151,3 +151,15 @@ nmap <Leader>r <Plug>(operator-replace)
 
 " mitubaEX/toggle_rspec_file.nvim
 nmap <Leader>x :ToggleRspecFile<CR>
+
+lua << EOF
+-- local snap = require'snap'
+-- snap.register.map({"n"}, {"<Leader>t"}, function ()
+--   snap.run {
+--     producer = snap.get'consumer.fzf'(snap.get'producer.git.file'),
+--     select = snap.get'select.file'.select,
+--     multiselect = snap.get'select.file'.multiselect,
+--     views = {snap.get'preview.file'}
+--   }
+-- end)
+EOF
