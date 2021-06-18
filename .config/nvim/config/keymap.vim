@@ -127,11 +127,11 @@ xnoremap <leader>a :AnyJumpVisual<CR>
 
 " easymotion {{{
 " Turn on case insensitive feature
-let g:EasyMotion_smartcase = 1
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
-
-map  <Leader>e <Plug>(easymotion-bd-w)
-nmap <Leader>e <Plug>(easymotion-overwin-w)
+" let g:EasyMotion_smartcase = 1
+" let g:EasyMotion_do_mapping = 0 " Disable default mappings
+"
+" map  <Leader>e <Plug>(easymotion-bd-w)
+" nmap <Leader>e <Plug>(easymotion-overwin-w)
 " }}}
 
 " open terminal in vsplit
@@ -162,4 +162,10 @@ lua << EOF
 --     views = {snap.get'preview.file'}
 --   }
 -- end)
+EOF
+
+" phaazon/hop.nvim
+nnoremap <Leader>e :HopWord<CR>
+lua << EOF
+require'hop'.setup { keys = 'etovxqpdygfblzhckisuran', term_seq_bias = 0.5, create_hl_autocmd = false, winblend = 0 }
 EOF

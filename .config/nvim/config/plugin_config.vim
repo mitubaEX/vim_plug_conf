@@ -282,3 +282,10 @@ EOF
 
 " vim-ruby
 let ruby_no_expensive = 1
+
+" rmagatti/goto-preview
+lua << EOF
+require('goto-preview').setup {
+  default_mappings = true
+}
+EOF

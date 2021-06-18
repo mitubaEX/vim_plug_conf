@@ -9,6 +9,7 @@ source $HOME/plugins/lang.vim
 Plug 'ulwlu/elly.vim'
 Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
+Plug 'ful1e5/onedark.nvim'
 
 Plug 'voldikss/vim-floaterm'
 
@@ -129,7 +130,7 @@ Plug 'folke/lua-dev.nvim'
 
 " Plug 'camspiers/snap'
 
-Plug 'ful1e5/onedark.nvim'
+Plug 'phaazon/hop.nvim'
 
 " Initialize plugin system
 call plug#end()

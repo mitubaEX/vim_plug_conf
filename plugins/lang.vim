@@ -18,3 +18,4 @@ Plug 'liuchengxu/vista.vim'
 
 Plug 'folke/lsp-trouble.nvim'
 
+Plug 'rmagatti/goto-preview'
