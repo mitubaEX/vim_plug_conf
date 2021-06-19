@@ -35,7 +35,7 @@ let g:far#source = 'rg'
 " vim-test/vim-test
 let test#ruby#rspec#options = {
   \ 'nearest': '--backtrace',
-  \ 'file':    '--format documentation',
+  \ 'file':    '--format documentation --only-failures',
   \ 'suite':   '--tag ~slow',
 \}
 let test#strategy = 'neovim'

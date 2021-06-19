@@ -37,6 +37,9 @@
 " ref: https://qiita.com/hrsh7th@github/items/7b9670adf3d8328fe2d8
 " $ brew install efm-langserver
 
+" srb
+" $ gem install sorbet
+
 " LSP config (the mappings used in the default file don't quite work right)
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
@@ -80,6 +83,7 @@ require'lspconfig'.flow.setup{}
 require'lspconfig'.yamlls.setup{}
 require'lspconfig'.rust_analyzer.setup{}
 require'lspconfig'.pyright.setup{}
+-- require'lspconfig'.sorbet.setup{}
 
 -- efm
 local eslint = {
