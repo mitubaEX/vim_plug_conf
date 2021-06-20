@@ -10,6 +10,7 @@ Plug 'ulwlu/elly.vim'
 Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
 Plug 'ful1e5/onedark.nvim'
+Plug 'drewtempelmeyer/palenight.vim'
 
 Plug 'voldikss/vim-floaterm'
 

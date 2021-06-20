@@ -1,4 +1,5 @@
 set termguicolors
 syntax enable
 
-colorscheme onedark
+set background=dark
+colorscheme palenight
