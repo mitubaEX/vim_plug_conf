@@ -289,3 +289,9 @@ require('goto-preview').setup {
   default_mappings = true
 }
 EOF
+
+" phaazon/hop.nvim
+highlight default HopNextKey  guifg=#ff007c gui=bold ctermfg=198 cterm=bold
+highlight default HopNextKey1 guifg=#00dfff gui=bold ctermfg=45 cterm=bold
+highlight default HopNextKey2 guifg=#2b8db3 ctermfg=33
+highlight default HopUnmatched guifg=#666666 ctermfg=242
