@@ -108,8 +108,6 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'aklt/plantuml-syntax'
 Plug 'weirongxu/plantuml-previewer.vim'
 
-Plug 'easymotion/vim-easymotion'
-
 Plug 'tweekmonster/startuptime.vim'
 
 Plug 'vuciv/vim-bujo'

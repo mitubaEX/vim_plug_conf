@@ -125,15 +125,6 @@ nnoremap <leader>a :AnyJump<CR>
 xnoremap <leader>a :AnyJumpVisual<CR>
 " }}}
 
-" easymotion {{{
-" Turn on case insensitive feature
-" let g:EasyMotion_smartcase = 1
-" let g:EasyMotion_do_mapping = 0 " Disable default mappings
-"
-" map  <Leader>e <Plug>(easymotion-bd-w)
-" nmap <Leader>e <Plug>(easymotion-overwin-w)
-" }}}
-
 " open terminal in vsplit
 nnoremap <Leader>- :vs<CR>
 nnoremap <Leader>= :vs +te<CR>
