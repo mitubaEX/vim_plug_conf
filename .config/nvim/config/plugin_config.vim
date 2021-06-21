@@ -292,7 +292,8 @@ let ruby_no_expensive = 1
 " rmagatti/goto-preview
 lua << EOF
 require('goto-preview').setup {
-  default_mappings = true
+  default_mappings = true,
+  current_line_blame_delay = 200,
 }
 EOF
 

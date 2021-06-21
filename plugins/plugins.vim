@@ -8,7 +8,7 @@ source $HOME/plugins/lang.vim
 " color schema
 Plug 'ulwlu/elly.vim'
 Plug 'morhetz/gruvbox'
-Plug 'ful1e5/onedark.nvim'
+Plug 'navarasu/onedark.nvim'
 Plug 'drewtempelmeyer/palenight.vim'
 
 Plug 'voldikss/vim-floaterm'

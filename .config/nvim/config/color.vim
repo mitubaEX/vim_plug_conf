@@ -1,5 +1,6 @@
 set termguicolors
 syntax enable
 
-set background=dark
+let g:onedark_style = 'deep'
+" set background=dark
 colorscheme onedark
