@@ -35,7 +35,7 @@ let g:far#source = 'rg'
 " vim-test/vim-test
 let test#ruby#rspec#options = {
   \ 'nearest': '--backtrace',
-  \ 'file':    '--format documentation --only-failures',
+  \ 'file':    '--format documentation',
   \ 'suite':   '--tag ~slow',
 \}
 let test#strategy = 'neovim'
@@ -196,7 +196,7 @@ EOF
 lua << EOF
 require('lualine').setup{
   options = {
-    theme = 'onedark',
+    theme = 'iceberg_dark',
     icons_enabled = true,
   },
   sections = {
