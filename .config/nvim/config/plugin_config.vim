@@ -302,3 +302,12 @@ highlight default HopNextKey  guifg=#ff007c gui=bold ctermfg=198 cterm=bold
 highlight default HopNextKey1 guifg=#00dfff gui=bold ctermfg=45 cterm=bold
 highlight default HopNextKey2 guifg=#2b8db3 ctermfg=33
 highlight default HopUnmatched guifg=#666666 ctermfg=242
+
+" folke/zen-mode.nvim
+lua << EOF
+  require("zen-mode").setup {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+  }
+EOF

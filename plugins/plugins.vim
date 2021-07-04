@@ -130,5 +130,7 @@ Plug 'folke/lua-dev.nvim'
 
 Plug 'phaazon/hop.nvim'
 
+Plug 'folke/zen-mode.nvim'
+
 " Initialize plugin system
 call plug#end()
